@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-28_16-33-08",
+            "content": "class PEssoa:\n    ",
+            "lines": "2"
+        }
+    ]
+}

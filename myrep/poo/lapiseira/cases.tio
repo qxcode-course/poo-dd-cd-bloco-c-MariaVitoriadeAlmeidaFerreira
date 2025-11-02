@@ -37,7 +37,7 @@ $init 0.5
 $show
 calibre: 0.5, bico: [], tambor: <>
 $insert 0.7 2B 50
-fail: calibre incompatível
+fail: calibre incompativel
 $insert 0.5 2B 50
 $show
 calibre: 0.5, bico: [], tambor: <[0.5:2B:50]>
@@ -59,7 +59,7 @@ $init 0.5
 $show
 calibre: 0.5, bico: [], tambor: <>
 $insert 0.7 2B 50
-fail: calibre incompatível
+fail: calibre incompativel
 $insert 0.5 2B 50
 $show
 calibre: 0.5, bico: [], tambor: <[0.5:2B:50]>
@@ -86,7 +86,7 @@ $init 0.5
 $show
 calibre: 0.5, bico: [], tambor: <>
 $insert 0.7 2B 50
-fail: calibre incompatível
+fail: calibre incompativel
 $insert 0.5 2B 50
 $show
 calibre: 0.5, bico: [], tambor: <[0.5:2B:50]>
@@ -117,7 +117,7 @@ $init 0.5
 $show
 calibre: 0.5, bico: [], tambor: <>
 $insert 0.7 2B 50
-fail: calibre incompatível
+fail: calibre incompativel
 $insert 0.5 2B 50
 $show
 calibre: 0.5, bico: [], tambor: <[0.5:2B:50]>
@@ -152,7 +152,7 @@ $init 0.5
 $show
 calibre: 0.5, bico: [], tambor: <>
 $insert 0.7 2B 50
-fail: calibre incompatível
+fail: calibre incompativel
 $insert 0.5 2B 50
 $show
 calibre: 0.5, bico: [], tambor: <[0.5:2B:50]>

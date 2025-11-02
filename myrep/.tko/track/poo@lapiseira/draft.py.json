@@ -17,8 +17,83 @@
         },
         {
             "label": "2025-11-02_18-17-46",
-            "content": "class Grafite:\n    def __init__ (self, calibre:float, hardness:str, size:int ):\n        self.__calibre = calibre\n        self.__hardness = hardness\n        self.__size = size\n\n    def getcalibre(self):\n        return self.__calibre\n    \n    def getHardness(self):\n        return self.__hardness\n    \n    def getSize(self):\n        return self.__size\n    \n    def setSize(self, size:int):\n        self.__size = size\n    \n    def usagepersheet(self) -> int:\n        if self.__hardness == 'HB':\n            return 1\n        elif self.__hardness == '2B':\n            return 2\n        elif self.__hardness == \"4B\":\n            return 4\n        elif self.__hardness == \"6B\":\n            return 6\n        return 0\n    \n    def __str__(self):\n        return f\"{self.__calibre}:{self.__hardness}:{self.__size}\"\n    \nclass Pencil:\n    def __init__(self, calibre: float):\n        self.__calibre = calibre\n        self.__ponta: Grafite | None = None\n        self.__tambor: list[Grafite] = [ ]\n\n    def HasGrafite(self) -> bool:\n        if self.__ponta != None:\n            return True\n        else:\n            return False\n\n    def insert(self, grafite: Grafite) -> bool:\n        if self.HasGrafite():\n            print(\"fail: ja existe grafite\")\n            return False\n        if grafite.getcalibre() != self.__calibre:\n            print(\"fail: calibre incompativel\")\n            return False\n        self.__ponta = grafite\n        return True\n   \n    def remove(self) -> Grafite | None:\n        if self.HasGrafite():\n           g = self.__ponta\n           self.__ponta = None\n           return g\n        else:\n            print(\"fail: nao existe grafite\")\n            return None\n\n    def writePage(self) -> None:\n        if self.HasGrafite() == False:\n            print(\"fail: nao existe grafite\")\n            return\n        \n        gasto = self.__ponta.usagepersheet()\n        tam_A = self.__ponta.getSize()\n        if self.__ponta.getSize() <= 10:\n            print(\"fail: tamanho insuficiente\")\n            return\n\n        if tam_A - gasto < 10:\n            self.__ponta.setSize(10)\n            print(\"fail: folha incompleta\")\n            return\n        \n        self.__ponta.setSize(tam_A - gasto)\n\n    def __str__(self) -> str:\n        aux = \"\"\n        if self.__ponta != None:\n            aux = f\"[{self.__ponta}]\" #to chamando\n        else:\n            aux = \"[]\"\n        aux2 = \"\"\n        if self.__tambor != [ ]:\n            aux2 = f\"{self.__tambor}\"\n        else: \n            aux2 = \"<>\"\n        return f\"calibre: {self.__calibre}, bico: {aux}, tambor: {aux2}\" \n      \ndef main():\n    pencil: Pencil | None = None\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(pencil)\n        elif args[0] == \"init\":\n            calibre = float(args[1])\n            pencil = Pencil(calibre)\n        elif args[0] == \"remove\":\n            if pencil:\n                pencil.remove()\n            else:\n                print(\"fail: remover\")\n        elif args[0] == \"insert\":\n            if not pencil:\n               print(\"fail\")\n               continue\n            teste = Grafite(float(args[1]),(args[2]), int (args[3]))\n            pencil.insert(teste)\n        elif args[0] == \"write\":\n                pencil.writePage()\n\n\n\n\nmain()\n",
+            "content": "@@ -1146,32 +1146,132 @@\n afite) -%3E bool:%0A\n+        if self.HasGrafite():%0A            print(%22fail: ja existe grafite%22)%0A            return False%0A\n         if grafi\n@@ -1397,30 +1397,23 @@\n f.__\n-tambor.append(\n+ponta = \n grafite\n-)\n %0A   \n",
             "lines": "125"
+        },
+        {
+            "label": "2025-11-02_18-32-53",
+            "content": "@@ -2282,17 +2282,16 @@\n aux2 = %22\n-%3C\n %22%0A      \n@@ -2292,25 +2292,51 @@\n         \n-%0A\n+if self.__tambor != %5B %5D:%0A  \n         \n aux2 += \n@@ -2331,17 +2331,72 @@\n     \n+  \n aux2 \n-+\n = \n-%22\n+f%22%7Bself.__tambor%7D%22%0A        else: %0A            aux2 = %22%3C\n %3E%22%0A \n",
+            "lines": "122"
+        },
+        {
+            "label": "2025-11-02_18-37-21",
+            "content": "@@ -623,17 +623,16 @@\n return 4\n- \n %0A       \n@@ -2269,36 +2269,38 @@\n %22%5B%5D%22%0A        aux\n+2\n  = %22\n+%3C\n %22%0A        for x \n@@ -2297,43 +2297,17 @@\n     \n-for x in self.__tambor:%0A   \n+%0A\n         \n  aux\n@@ -2306,17 +2306,16 @@\n     \n- \n aux2 += \n f%22%5B%7B\n@@ -2314,15 +2314,10 @@\n  += \n-f%22%5B%7Bx%7D%5D\n+%22%3E\n %22%0A  \n@@ -2383,16 +2383,14 @@\n or: \n-%3C\n %7Baux2%7D\n-%3E\n %22 %0A \n",
+            "lines": "120"
+        },
+        {
+            "label": "2025-11-02_19-08-08",
+            "content": "@@ -2349,21 +2349,8 @@\n %7D%5D%22%0A\n-            %0A\n     \n",
+            "lines": "120"
+        },
+        {
+            "label": "2025-11-02_19-08-58",
+            "content": "@@ -2278,17 +2278,16 @@\n      aux\n-2\n  = %22%22%0A  \n@@ -2345,16 +2345,28 @@\n %22%5B%7Bx%7D%5D%22%0A\n+            \n %0A       \n",
+            "lines": "121"
+        },
+        {
+            "label": "2025-11-02_19-09-32",
+            "content": "@@ -2102,164 +2102,8 @@\n to)%0A\n-    %0A    def pull(self) -%3E bool:%0A        if self.__tambor != None:%0A            self.__tambor = self.__ponta%0A        else:%0A            print(%22fail%22)%0A        \n %0A   \n@@ -3232,70 +3232,8 @@\n e()%0A\n-        elif args%5B0%5D == %22pull%22:%0A                pencil.pull()%0A\n %0A%0A%0A%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2025-11-02_19-19-33",
+            "content": "@@ -2159,18 +2159,20 @@\n mbor != \n-%5B%5D\n+None\n :%0A      \n@@ -2210,32 +2210,8 @@\n nta%0A\n-            return True%0A\n     \n@@ -2254,32 +2254,16 @@\n         \n-    return False\n %0A    def\n",
+            "lines": "129"
+        },
+        {
+            "label": "2025-11-02_19-20-33",
+            "content": "@@ -2182,21 +2182,22 @@\n  self.__\n-ponta\n+tambor\n  = self.\n@@ -2198,22 +2198,21 @@\n  self.__\n-tambor\n+ponta\n %0A       \n",
+            "lines": "130"
+        },
+        {
+            "label": "2025-11-02_19-24-30",
+            "content": "@@ -2207,59 +2207,8 @@\n mbor\n-%5B0%5D%0A            self.__tambor.remover(self.__ponta)\n %0A   \n",
+            "lines": "130"
+        },
+        {
+            "label": "2025-11-02_19-30-01",
+            "content": "@@ -3509,50 +3509,8 @@\n l%22:%0A\n-                assert pencil is not None%0A\n     \n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-11-02_19-33-39",
+            "content": "@@ -2235,24 +2235,25 @@\n ambor.remove\n+r\n (self.__pont\n@@ -3505,16 +3505,58 @@\n %22pull%22:%0A\n+                assert pencil is not None%0A\n         \n",
+            "lines": "132"
+        },
+        {
+            "label": "2025-11-02_19-34-31",
+            "content": "@@ -1694,16 +1694,8 @@\n fite\n- no bico\n %22)%0A \n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-11-02_19-35-01",
+            "content": "@@ -2143,94 +2143,8 @@\n ol:%0A\n-        if self.__ponta != None:%0A            print(%22fail: ja existe grafite no bico%22)%0A\n     \n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-11-02_19-37-29",
+            "content": "@@ -1543,32 +1543,24 @@\n iste grafite\n- no bico\n %22)%0A         \n",
+            "lines": "133"
+        },
+        {
+            "label": "2025-11-02_19-41-03",
+            "content": "@@ -2237,33 +2237,8 @@\n o%22)%0A\n-            return False%0A\n     \n@@ -2398,32 +2398,58 @@\n se:%0A            \n+print(%22fail%22)%0A            \n return False%0A   \n@@ -2444,25 +2444,16 @@\n rn False\n-%0A        \n %0A    def\n@@ -3637,15 +3637,18 @@\n pull()%0A%0A\n+%0A%0A%0A\n main()%0A\n",
+            "lines": "133"
+        },
+        {
+            "label": "2025-11-02_19-45-42",
+            "content": "class Grafite:\n    def __init__ (self, calibre:float, hardness:str, size:int ):\n        self.__calibre = calibre\n        self.__hardness = hardness\n        self.__size = size\n\n    def getcalibre(self):\n        return self.__calibre\n    \n    def getHardness(self):\n        return self.__hardness\n    \n    def getSize(self):\n        return self.__size\n    \n    def setSize(self, size:int):\n        self.__size = size\n    \n    def usagepersheet(self) -> int:\n        if self.__hardness == 'HB':\n            return 1\n        elif self.__hardness == '2B':\n            return 2\n        elif self.__hardness == \"4B\":\n            return 4 \n        elif self.__hardness == \"6B\":\n            return 6\n        return 0\n    \n    def __str__(self):\n        return f\"{self.__calibre}:{self.__hardness}:{self.__size}\"\n    \nclass Pencil:\n    def __init__(self, calibre: float):\n        self.__calibre = calibre\n        self.__ponta: Grafite | None = None\n        self.__tambor: list[Grafite] = [ ]\n\n    def HasGrafite(self) -> bool:\n        if self.__ponta != None:\n            return True\n        else:\n            return False\n\n    def insert(self, grafite: Grafite) -> bool:\n        if grafite.getcalibre() != self.__calibre:\n            print(\"fail: calibre incompativel\")\n            return False\n        self.__tambor.append(grafite)\n        return True\n   \n    def remove(self) -> Grafite | None:\n        if self.HasGrafite():\n           g = self.__ponta\n           self.__ponta = None\n           return g\n        else:\n            print(\"fail: nao existe grafite no bico\")\n            return None\n\n    def writePage(self) -> None:\n        if self.HasGrafite() == False:\n            print(\"fail: nao existe grafite no bico\")\n            return\n        \n        gasto = self.__ponta.usagepersheet()\n        tam_A = self.__ponta.getSize()\n        if self.__ponta.getSize() <= 10:\n            print(\"fail: tamanho insuficiente\")\n            return\n\n        if tam_A - gasto < 10:\n            self.__ponta.setSize(10)\n            print(\"fail: folha incompleta\")\n            return\n        \n        self.__ponta.setSize(tam_A - gasto)\n    \n    def pull(self) -> bool:\n        if self.__ponta != None:\n            print(\"fail: ja existe grafite no bico\")\n            return False\n        if self.__tambor != []:\n            self.__ponta = self.__tambor[0]\n            self.__tambor.remove(self.__ponta)\n            return True\n        else:\n            return False\n        \n    def __str__(self) -> str:\n        aux = \"\"\n        if self.__ponta != None:\n            aux = f\"[{self.__ponta}]\" #to chamando\n        else:\n            aux = \"[]\"\n        aux2 = \"\"\n        for x in self.__tambor:\n            aux2 += f\"[{x}]\"\n\n        return f\"calibre: {self.__calibre}, bico: {aux}, tambor: <{aux2}>\" \n      \ndef main():\n    pencil: Pencil | None = None\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(pencil)\n        elif args[0] == \"init\":\n            calibre = float(args[1])\n            pencil = Pencil(calibre)\n        elif args[0] == \"remove\":\n            if pencil:\n                pencil.remove()\n            else:\n                print(\"fail: remover\")\n        elif args[0] == \"insert\":\n            if not pencil:\n               print(\"fail\")\n               continue\n            teste = Grafite(float(args[1]),(args[2]), int (args[3]))\n            pencil.insert(teste)\n        elif args[0] == \"write\":\n                pencil.writePage()\n        elif args[0] == \"pull\":\n                pencil.pull()\n\nmain()\n",
+            "lines": "131"
         }
     ]
 }

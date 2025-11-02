@@ -22,7 +22,7 @@ class Grafite:
         elif self.__hardness == '2B':
             return 2
         elif self.__hardness == "4B":
-            return 4
+            return 4 
         elif self.__hardness == "6B":
             return 6
         return 0
@@ -43,13 +43,10 @@ class Pencil:
             return False
 
     def insert(self, grafite: Grafite) -> bool:
-        if self.HasGrafite():
-            print("fail: ja existe grafite")
-            return False
         if grafite.getcalibre() != self.__calibre:
             print("fail: calibre incompativel")
             return False
-        self.__ponta = grafite
+        self.__tambor.append(grafite)
         return True
    
     def remove(self) -> Grafite | None:
@@ -58,12 +55,12 @@ class Pencil:
            self.__ponta = None
            return g
         else:
-            print("fail: nao existe grafite")
+            print("fail: nao existe grafite no bico")
             return None
 
     def writePage(self) -> None:
         if self.HasGrafite() == False:
-            print("fail: nao existe grafite")
+            print("fail: nao existe grafite no bico")
             return
         
         gasto = self.__ponta.usagepersheet()
@@ -78,7 +75,18 @@ class Pencil:
             return
         
         self.__ponta.setSize(tam_A - gasto)
-
+    
+    def pull(self) -> bool:
+        if self.__ponta != None:
+            print("fail: ja existe grafite no bico")
+            return False
+        if self.__tambor != []:
+            self.__ponta = self.__tambor[0]
+            self.__tambor.remove(self.__ponta)
+            return True
+        else:
+            return False
+        
     def __str__(self) -> str:
         aux = ""
         if self.__ponta != None:
@@ -86,11 +94,10 @@ class Pencil:
         else:
             aux = "[]"
         aux2 = ""
-        if self.__tambor != [ ]:
-            aux2 = f"{self.__tambor}"
-        else: 
-            aux2 = "<>"
-        return f"calibre: {self.__calibre}, bico: {aux}, tambor: {aux2}" 
+        for x in self.__tambor:
+            aux2 += f"[{x}]"
+
+        return f"calibre: {self.__calibre}, bico: {aux}, tambor: <{aux2}>" 
       
 def main():
     pencil: Pencil | None = None
@@ -118,8 +125,7 @@ def main():
             pencil.insert(teste)
         elif args[0] == "write":
                 pencil.writePage()
-
-
-
+        elif args[0] == "pull":
+                pencil.pull()
 
 main()

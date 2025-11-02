@@ -20,7 +20,7 @@ $init 0.5
 $show
 calibre: 0.5, bico: [], tambor: <>
 $insert 0.7 2B 50
-fail: calibre incompatível
+fail: calibre incompativel
 $end
 <<<<<<<< FINISH
 

@@ -82,12 +82,16 @@ class Pencil:
     def __str__(self) -> str:
         aux = ""
         if self.__ponta != None:
-            aux = f"[{self.__ponta}]"
+            aux = f"[{self.__ponta}]" #to chamando
         else:
-            aux = "null"
-        return f"calibre: {self.__calibre}, grafite: {aux}" 
-    
-
+            aux = "[]"
+        aux2 = ""
+        if self.__tambor != [ ]:
+            aux2 = f"{self.__tambor}"
+        else: 
+            aux2 = "<>"
+        return f"calibre: {self.__calibre}, bico: {aux}, tambor: {aux2}" 
+      
 def main():
     pencil: Pencil | None = None
     while True:

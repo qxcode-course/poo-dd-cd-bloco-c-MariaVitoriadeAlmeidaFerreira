@@ -23,3 +23,4 @@
 2025-11-02 19:45:42, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:100, size:131
 2025-11-02 19:45:52, MOVE, v:1, k:poo@lapiseira, mode:BACK
 2025-11-02 19:47:11, SELF, v:1, k:poo@lapiseira, rate:100, human:Namorado, alone:9, study:120
+2025-11-02 19:48:03, MOVE, v:1, k:poo@pula-pula, mode:DOWN

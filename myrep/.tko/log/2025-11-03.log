@@ -1,0 +1,5 @@
+2025-11-03 15:42:43, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-03 15:43:10, EXEC, v:1, k:poo@lapiseira, mode:FULL, rate:100
+2025-11-03 15:43:15, MOVE, v:1, k:poo@lapiseira, mode:BACK
+2025-11-03 15:43:18, MOVE, v:1, k:poo@pula-pula, mode:PICK
+2025-11-03 15:43:20, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:0, size:22

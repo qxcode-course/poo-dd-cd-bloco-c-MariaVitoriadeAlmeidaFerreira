@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-03_15-43-20",
+            "content": "class Kid:\n    def __init__(self, name: str, age: int):\n        self.__name: str = name\n        self.__age: int = age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def getAge(self) -> int:\n        return self.__age\n\n    def setAge(self, age: int) -> int:\n        self.__age = age\n    \n    def setName(self, name: str) -> str:\n        self.__name = name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n\nclass pulaP:\n    ''\n",
+            "lines": "22"
+        }
+    ]
+}

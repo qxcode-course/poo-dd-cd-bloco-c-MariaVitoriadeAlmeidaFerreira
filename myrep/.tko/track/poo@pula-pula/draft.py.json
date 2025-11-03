@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2025-11-03_15-43-20",
-            "content": "class Kid:\n    def __init__(self, name: str, age: int):\n        self.__name: str = name\n        self.__age: int = age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def getAge(self) -> int:\n        return self.__age\n\n    def setAge(self, age: int) -> int:\n        self.__age = age\n    \n    def setName(self, name: str) -> str:\n        self.__name = name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n\nclass pulaP:\n    ''\n",
+            "content": "@@ -469,618 +469,7 @@\n     \n-def __init__(self):%0A        self.__bricando: list%5BKid%5D = %5B%5D%0A        self.__esperar: list%5BKid%5D = %5B%5D%0A%0A    #def __removeFromList(self, name: str, list: list%5BKid%5D) -%3E Kid %7C None:%0A        %0A    def arrive(self, kid: Kid) -%3E None:%0A        self.__esperar.append(kid)%0A%0A    def enter (self) -%3E None:%0A        if self.__esperar:%0A            Kid = self.__esperar.pop(0)%0A            self.__bricando.append(Kid)%0A%0A    def leave(self):%0A        if self.__bricando:%0A            Kid = self.__esperar.pop(0)%0A            self.__bricando.append(Kid)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%5B%7Bself.__bricando%7D%5D%22%0A       %0A%0A%0A%0A%0A    %0A\n+''\n %0A\n",
             "lines": "22"
+        },
+        {
+            "label": "2025-11-03_16-29-34",
+            "content": "class Kid:\n    def __init__(self, name: str, age: int):\n        self.__name: str = name\n        self.__age: int = age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def getAge(self) -> int:\n        return self.__age\n\n    def setAge(self, age: int) -> int:\n        self.__age = age\n    \n    def setName(self, name: str) -> str:\n        self.__name = name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n\nclass pulaP:\n    def __init__(self):\n        self.__bricando: list[Kid] = []\n        self.__esperar: list[Kid] = []\n\n    #def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:\n        \n    def arrive(self, kid: Kid) -> None:\n        self.__esperar.append(kid)\n\n    def enter (self) -> None:\n        if self.__esperar:\n            Kid = self.__esperar.pop(0)\n            self.__bricando.append(Kid)\n\n    def leave(self):\n        if self.__bricando:\n            Kid = self.__esperar.pop(0)\n            self.__bricando.append(Kid)\n\n    def __str__(self) -> str:\n        return f\"[{self.__bricando}]\"\n       \n\n\n\n\n    \n\n",
+            "lines": "49"
         }
     ]
 }

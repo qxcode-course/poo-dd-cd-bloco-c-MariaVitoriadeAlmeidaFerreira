@@ -27,7 +27,7 @@ class pulaP:
         
     def arrive(self, kid: Kid) -> None:
         self.__esperar.append(kid)
-
+            #a criança chegou
     def enter (self) -> None:
         if self.__esperar:
             Kid = self.__esperar.pop(0)
@@ -37,6 +37,9 @@ class pulaP:
         if self.__bricando:
             Kid = self.__esperar.pop(0)
             self.__bricando.append(Kid)
+
+    def __str__(self) -> str:
+        return(f"[{self.__esperar}]" => "[{self.__bricando}]")
        
 
 

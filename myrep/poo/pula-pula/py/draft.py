@@ -23,8 +23,10 @@ class pulaP:
         self.__bricando: list[Kid] = []
         self.__esperar: list[Kid] = []
 
-    def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
-        for i in Kid
+    #def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
+       # for i in Kid enumerate():
+            
+        
         
     def arrive(self, kid: Kid) -> None:
         self.__esperar.append(kid)
@@ -40,7 +42,9 @@ class pulaP:
             self.__bricando.append(Kid)
 
     def __str__(self) -> str:
-        return f"[{self.__esperar}] => [{self.__bricando}]"
+            espera_str = ' , '.join(str(x) for x in self.__esperar)
+            bricando_str = ' , '.join(str(x) for x in self.__bricando)
+            return f"[{espera_str}] => [{bricando_str}]"
     
     def remove_kid(self) -> Kid | None:
         if self.__bricando ():
@@ -50,7 +54,20 @@ class pulaP:
         else:
             print ("fail: {self.__nome} nao esta no pula pula")
 
-    def show(self):
+def main():
+    pula = pulaP()
+    while True:
+        line: str = input()
+        print("$" + line)
+        args: list[str] = line.split(" ")
+        if args[0] == "end":
+            break
+        elif args[0] == "show":
+            print(pula)
+        
+
+
+main()
         
         
 

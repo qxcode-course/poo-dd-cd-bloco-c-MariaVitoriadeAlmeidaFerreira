@@ -23,36 +23,32 @@ class pulaP:
         self.__bricando: list[Kid] = []
         self.__esperar: list[Kid] = []
 
-    #def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
-       # for i in Kid enumerate():
-            
+    def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
+       for i in Kid enumerate(list): 
+        if 
+        
         
         
     def arrive(self, kid: Kid) -> None:
-        self.__esperar.append(kid)
-            #a criança chegou
+        self.__esperar.append(kid) # a criança chegou
+
     def enter (self) -> None:
         if self.__esperar:
-            Kid = self.__esperar.pop(0)
-            self.__bricando.append(Kid)
+            crianca = self.__esperar.pop(0)
+            self.__bricando.append(crianca)
 
-    def leave(self):
+    def leave(self) -> None:
         if self.__bricando:
-            Kid = self.__esperar.pop(0)
-            self.__bricando.append(Kid)
+            crianca = self.__bricando.pop(0)
+            self.__esperar.insert(crianca)
 
     def __str__(self) -> str:
-            espera_str = ' , '.join(str(x) for x in self.__esperar)
-            bricando_str = ' , '.join(str(x) for x in self.__bricando)
+            espera_str = ','.join(str(x) for x in self.__esperar)
+            bricando_str = ','.join(str(x) for x in self.__bricando)
             return f"[{espera_str}] => [{bricando_str}]"
     
-    def remove_kid(self) -> Kid | None:
-        if self.__bricando ():
-            aux = self.__bricando
-            self.__bricando = None
-            return aux
-        else:
-            print ("fail: {self.__nome} nao esta no pula pula")
+    #def remove_kid(self) -> Kid | None:
+    
 
 def main():
     pula = pulaP()

@@ -42,8 +42,98 @@
         },
         {
             "label": "2025-11-06_16-12-30",
-            "content": "class Kid:\n    def __init__(self, name: str, age: int):\n        self.__name: str = name\n        self.__age: int = age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def getAge(self) -> int:\n        return self.__age\n\n    def setAge(self, age: int) -> int:\n        self.__age = age\n    \n    def setName(self, name: str) -> str:\n        self.__name = name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n\nclass pulaP:\n    def __init__(self):\n        self.__bricando: list[Kid] = []\n        self.__esperar: list[Kid] = []\n\n    #def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:\n       # for i in Kid enumerate():\n            \n        \n        \n    def arrive(self, kid: Kid) -> None:\n        self.__esperar.append(kid)\n            #a crian\u00e7a chegou\n    def enter (self) -> None:\n        if self.__esperar:\n            Kid = self.__esperar.pop(0)\n            self.__bricando.append(Kid)\n\n    def leave(self):\n        if self.__bricando:\n            Kid = self.__esperar.pop(0)\n            self.__bricando.append(Kid)\n\n    def __str__(self) -> str:\n            espera_str = ' , '.join(str(x) for x in self.__esperar)\n            bricando_str = ' , '.join(str(x) for x in self.__bricando)\n            return f\"[{espera_str}] => [{bricando_str}]\"\n    \n    def remove_kid(self) -> Kid | None:\n        if self.__bricando ():\n            aux = self.__bricando\n            self.__bricando = None\n            return aux\n        else:\n            print (\"fail: {self.__nome} nao esta no pula pula\")\n\ndef main():\n    pula = pulaP()\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(pula)\n\n\n\nmain()\n        \n        \n\n\n\n\n\n\n\n\n    \n\n",
+            "content": "@@ -1798,24 +1798,16 @@\n t(pula)%0A\n-        \n %0A%0A%0Amain(\n",
             "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-16-20",
+            "content": "@@ -940,14 +940,14 @@\n ndo.\n-insert\n+append\n (Kid\n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-17-41",
+            "content": "@@ -950,11 +950,8 @@\n (Kid\n-, 0\n )%0A%0A \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-20-36",
+            "content": "@@ -947,14 +947,14 @@\n ert(\n-0, \n Kid\n+, 0\n )%0A%0A \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-21-02",
+            "content": "@@ -780,11 +780,8 @@\n end(\n-0, \n kid)\n@@ -928,39 +928,42 @@\n self.__bricando.\n-append(\n+insert(0, \n Kid)%0A%0A    def le\n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-22-24",
+            "content": "@@ -773,14 +773,14 @@\n rar.\n-insert\n+append\n (0, \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-22-40",
+            "content": "@@ -908,16 +908,17 @@\n rar.pop(\n+0\n )%0A      \n@@ -939,22 +939,22 @@\n ricando.\n-insert\n+append\n (Kid)%0A%0A \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-25-41",
+            "content": "@@ -1068,26 +1068,23 @@\n ricando.\n-insert(0, \n+append(\n Kid)%0A%0A  \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-26-42",
+            "content": "@@ -1029,32 +1029,33 @@\n f.__esperar.pop(\n+0\n )%0A            se\n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-26-56",
+            "content": "@@ -675,33 +675,37 @@\n rate():%0A        \n+    \n %0A\n-\n         %0A       \n@@ -783,19 +783,30 @@\n (0, kid)\n+%0A           \n  #\n- \n a crian%C3%A7\n@@ -814,17 +814,16 @@\n  chegou%0A\n-%0A\n     def \n@@ -1366,9 +1366,200 @@\n     \n-3\n+if self.__bricando ():%0A            aux = self.__bricando%0A            self.__bricando = None%0A            return aux%0A        else:%0A            print (%22fail: %7Bself.__nome%7D nao esta no pula pula%22)\n %0A%0Ade\n@@ -1778,16 +1778,16 @@\n %22show%22:%0A\n+\n         \n@@ -1806,68 +1806,8 @@\n la)%0A\n-        elif args%5B0%5D == %22arrive%22:%0A            pula.arrive()%0A\n     \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-06_16-30-59",
+            "content": "@@ -928,14 +928,14 @@\n ndo.\n-append\n+insert\n (Kid\n@@ -1597,16 +1597,76 @@\n t(pula)%0A\n+        elif args%5B0%5D == %22arrive%22:%0A            pula.arrive()%0A\n         \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-11-06_16-32-41",
+            "content": "@@ -861,33 +861,33 @@\n ar:%0A            \n-k\n+K\n id = self.__espe\n@@ -998,17 +998,17 @@\n         \n-k\n+K\n id = sel\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-33-09",
+            "content": "@@ -861,39 +861,35 @@\n ar:%0A            \n-crianca\n+kid\n  = self.__espera\n@@ -1002,15 +1002,11 @@\n     \n-crianca\n+kid\n  = s\n@@ -1011,24 +1011,23 @@\n  self.__\n-bricando\n+esperar\n .pop()%0A \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-34-03",
+            "content": "@@ -1045,39 +1045,40 @@\n          self.__\n-esperar\n+bricando\n .insert(0, Kid)%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-34-17",
+            "content": "@@ -765,23 +765,29 @@\n esperar.\n-append(\n+insert(0, kid\n ) # a cr\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-34-47",
+            "content": "@@ -772,19 +772,16 @@\n .append(\n-kid\n ) # a cr\n@@ -929,23 +929,19 @@\n .append(\n-crianca\n+Kid\n )%0A%0A    d\n@@ -950,32 +950,24 @@\n  leave(self)\n- -%3E None\n :%0A        if\n@@ -1065,23 +1065,19 @@\n sert(0, \n-crianca\n+Kid\n )%0A%0A    d\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-35-45",
+            "content": "@@ -1138,33 +1138,35 @@\n   espera_str = '\n-,\n+ , \n '.join(str(x) fo\n@@ -1216,17 +1216,19 @@\n _str = '\n-,\n+ , \n '.join(s\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-36-00",
+            "content": "@@ -891,25 +891,24 @@\n esperar.pop(\n-0\n )%0A          \n@@ -1041,17 +1041,16 @@\n ndo.pop(\n-0\n )%0A      \n@@ -1077,16 +1077,19 @@\n .insert(\n+0, \n crianca)\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-06_16-37-16",
+            "content": "class Kid:\n    def __init__(self, name: str, age: int):\n        self.__name: str = name\n        self.__age: int = age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def getAge(self) -> int:\n        return self.__age\n\n    def setAge(self, age: int) -> int:\n        self.__age = age\n    \n    def setName(self, name: str) -> str:\n        self.__name = name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n\nclass pulaP:\n    def __init__(self):\n        self.__bricando: list[Kid] = []\n        self.__esperar: list[Kid] = []\n\n    #def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:\n       # for i in Kid enumerate():\n        \n        \n        \n    def arrive(self, kid: Kid) -> None:\n        self.__esperar.append(kid) # a crian\u00e7a chegou\n\n    def enter (self) -> None:\n        if self.__esperar:\n            crianca = self.__esperar.pop(0)\n            self.__bricando.append(crianca)\n\n    def leave(self) -> None:\n        if self.__bricando:\n            crianca = self.__bricando.pop(0)\n            self.__esperar.insert(crianca)\n\n    def __str__(self) -> str:\n            espera_str = ','.join(str(x) for x in self.__esperar)\n            bricando_str = ','.join(str(x) for x in self.__bricando)\n            return f\"[{espera_str}] => [{bricando_str}]\"\n    \n    def remove_kid(self) -> Kid | None:\n        3\n\ndef main():\n    pula = pulaP()\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(pula)\n        \n\n\nmain()\n        \n        \n\n\n\n\n\n\n\n\n    \n\n",
+            "lines": "77"
         }
     ]
 }

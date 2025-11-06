@@ -2,7 +2,12 @@
     "patches": [
         {
             "label": "2025-10-28_16-33-08",
-            "content": "class PEssoa:\n    ",
+            "content": "@@ -4,9 +4,9 @@\n ss P\n-e\n+E\n ssoa\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-06_13-22-01",
+            "content": "class Pessoa:\n    ",
             "lines": "2"
         }
     ]

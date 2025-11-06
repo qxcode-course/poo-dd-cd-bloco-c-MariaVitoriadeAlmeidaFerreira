@@ -39,8 +39,22 @@ class pulaP:
             self.__bricando.append(Kid)
 
     def __str__(self) -> str:
-        return(f"[{self.__esperar}]" => "[{self.__bricando}]")
-       
+        return [{self.__nome}] => [{self.__bricando}]
+    
+    def remove_kid(self) -> Kid | None:
+        if self.__bricando ():
+            aux = self.__bricando
+            self.__bricando = None
+            return aux
+        else:
+            print ("fail: {self.__nome} nao esta no pula pula")
+
+    def show(self):
+        
+
+
+
+
 
 
 

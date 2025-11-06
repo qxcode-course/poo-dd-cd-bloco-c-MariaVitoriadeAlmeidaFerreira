@@ -23,7 +23,8 @@ class pulaP:
         self.__bricando: list[Kid] = []
         self.__esperar: list[Kid] = []
 
-    #def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
+    def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
+        for i in Kid
         
     def arrive(self, kid: Kid) -> None:
         self.__esperar.append(kid)
@@ -39,7 +40,7 @@ class pulaP:
             self.__bricando.append(Kid)
 
     def __str__(self) -> str:
-        return [{self.__nome}] => [{self.__bricando}]
+        return f"[{self.__esperar}] => [{self.__bricando}]"
     
     def remove_kid(self) -> Kid | None:
         if self.__bricando ():
@@ -50,6 +51,7 @@ class pulaP:
             print ("fail: {self.__nome} nao esta no pula pula")
 
     def show(self):
+        
         
 
 

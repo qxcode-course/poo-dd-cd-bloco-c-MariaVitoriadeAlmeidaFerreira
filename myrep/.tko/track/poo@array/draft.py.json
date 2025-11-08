@@ -12,8 +12,18 @@
         },
         {
             "label": "2025-11-08_18-00-17",
-            "content": "class NA:\n    def __init__(self, x: int):\n        self.x = x\n\n    def __str__(self):\n        return f'NA({self.x})'\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5]\nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\n\nlista_vazia.append(1) #adicionar no final\nlista_preenchida.append(NA(6)) #remover do final   \n\n#precisa formar em um str antes\nprint(\", \". join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array",
+            "content": "@@ -365,306 +365,50 @@\n nal \n-%0Alista_preencida_objetos.append(NA(6))%0Alista_preenchida.remove(3) # remove o valor 3%0Aobj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA%0A#lista_preenchida.insert(4, 13) #inserindo 13 na 4 posicao%0A%0A%0A%0A#precisa formar em um str antes%0Aprint(lista_preenchida)%0Aprint(%22lista preenchida:%22, \n+  %0A%0A#precisa formar em um str antes%0Aprint(\n %22, %22\n@@ -501,42 +501,4 @@\n rray\n-%0Aprint(%22obj removido:%22, obj_removido)%0A\n",
             "lines": "16"
+        },
+        {
+            "label": "2025-11-08_18-19-13",
+            "content": "@@ -362,16 +362,54 @@\n  final %0A\n+lista_preencida_objetos.append(NA(6))%0A\n lista_pr\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-08_18-19-24",
+            "content": "class NA:\n    def __init__(self, x: int):\n        self.x = x\n\n    def __str__(self):\n        return f'NA({self.x})'\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5]\nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\n\nlista_vazia.append(1) #adicionar no final\nlista_preenchida.append(NA(6)) #remover do final \nlista_preenchida.remove(3) # remove o valor 3\nobj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA\n#lista_preenchida.insert(4, 13) #inserindo 13 na 4 posicao\n\n\n\n#precisa formar em um str antes\nprint(lista_preenchida)\nprint(\"lista preenchida:\", \", \". join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido:\", obj_removido)\n",
+            "lines": "23"
         }
     ]
 }

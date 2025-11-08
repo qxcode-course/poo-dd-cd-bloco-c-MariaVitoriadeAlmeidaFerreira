@@ -27,8 +27,6 @@ class pulaP:
        for i in Kid enumerate(list): 
         if 
         
-        
-        
     def arrive(self, kid: Kid) -> None:
         self.__esperar.append(kid) # a criança chegou
 

@@ -25,27 +25,29 @@ class pulaP:
 
     def __removeFromList(self, name: str, lista: list[Kid]) -> Kid | None:
        for i, Kid in enumerate(lista):
-        
+           if Kid.getName() == name:
+               return lista.pop(i) #remove a crianca da primeira posicao
+           return None
         
     def arrive(self, kid: Kid) -> None:
-        self.__esperar.append(kid) # a criança chegou
+        self.__esperar.insert(0, kid) # a criança chegou
 
     def enter (self) -> None:
         if self.__esperar:
-            crianca = self.__esperar.pop(0)
-            self.__bricando.append(crianca)
+            crianca = self.__esperar.pop()
+            self.__bricando.append(crianca) #ficou na ultima posicao
 
     def leave(self) -> None:
         if self.__bricando:
-            crianca = self.__bricando.pop(0)
-            self.__esperar.insert(crianca)
+            crianca = self.__bricando.pop()
+            self.__esperar.insert(crianca) 
 
     def __str__(self) -> str:
-            espera_str = ','.join(str(x) for x in self.__esperar)
-            bricando_str = ','.join(str(x) for x in self.__bricando)
+            espera_str = ', '.join(str(x) for x in self.__esperar)
+            bricando_str = ', '.join(str(x) for x in self.__bricando)
             return f"[{espera_str}] => [{bricando_str}]"
     
-    #def remove_kid(self) -> Kid | None:
+    def remove_kid(self) -> Kid | None:
     
 
 def main():
@@ -58,6 +60,12 @@ def main():
             break
         elif args[0] == "show":
             print(pula)
+        elif args[0] == "arrive":
+            pula.arrive(Kid(args[1], int(args[2])))
+        elif args[0] == "enter":
+            pula.enter()
+
+        
         
 
 

@@ -23,9 +23,9 @@ class pulaP:
         self.__bricando: list[Kid] = []
         self.__esperar: list[Kid] = []
 
-    def __removeFromList(self, name: str, list: list[Kid]) -> Kid | None:
-       for i in Kid enumerate(list): 
-        if 
+    def __removeFromList(self, name: str, lista: list[Kid]) -> Kid | None:
+       for i, Kid in enumerate(lista):
+        
         
     def arrive(self, kid: Kid) -> None:
         self.__esperar.append(kid) # a criança chegou

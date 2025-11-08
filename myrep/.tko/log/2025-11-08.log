@@ -38,3 +38,8 @@
 2025-11-08 16:34:51, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:0, size:91
 2025-11-08 16:35:42, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:90, size:91
 2025-11-08 16:38:51, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:100, size:91
+2025-11-08 16:45:02, MOVE, v:1, k:poo@pula-pula, mode:BACK
+2025-11-08 16:45:39, SELF, v:1, k:poo@pula-pula, rate:100, study:180
+2025-11-08 16:45:59, SELF, v:1, k:poo@pula-pula, rate:100, alone:10, study:180
+2025-11-08 16:46:23, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-08 16:46:25, MOVE, v:1, k:poo@array, mode:BACK

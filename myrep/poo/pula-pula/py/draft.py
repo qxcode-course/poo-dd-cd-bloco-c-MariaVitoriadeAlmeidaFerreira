@@ -40,15 +40,22 @@ class pulaP:
     def leave(self) -> None:
         if self.__bricando:
             crianca = self.__bricando.pop()
-            self.__esperar.insert(crianca) 
+            self.__esperar.insert(0, crianca) 
 
     def __str__(self) -> str:
             espera_str = ', '.join(str(x) for x in self.__esperar)
             bricando_str = ', '.join(str(x) for x in self.__bricando)
             return f"[{espera_str}] => [{bricando_str}]"
     
-    def remove_kid(self) -> Kid | None:
-    
+    def remove_kid(self, name:str) -> Kid | None:
+        crianca = self.__removeFromList(name, self.__esperar)
+        if crianca is not None:
+            return crianca
+        crianca = self.__removeFromList(name, self.__bricando)
+        if crianca is not None:
+            return crianca
+        print("fail: {name} nao esta no pula-pula")
+        
 
 def main():
     pula = pulaP()
@@ -64,9 +71,10 @@ def main():
             pula.arrive(Kid(args[1], int(args[2])))
         elif args[0] == "enter":
             pula.enter()
-
-        
-        
+        elif args[0] == "leave":
+            pula.leave()
+        elif args[0] == "remove":
+            pula.remove_kid(args[1])
 
 
 main()

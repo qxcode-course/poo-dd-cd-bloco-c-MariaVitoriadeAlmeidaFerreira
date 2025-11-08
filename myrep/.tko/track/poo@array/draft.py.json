@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-08_16-50-29",
+            "content": "@@ -143,22 +143,9 @@\n = %5B%5D\n- #lista vazia\n %0A\n+\n list\n@@ -290,28 +290,8 @@\n d(1)\n- #adicionar no final\n %0Alis\n@@ -322,107 +322,4 @@\n (6))\n- #remover do final   %0A%0Aprint(%22, %22. join(lista_preencida_objetos)) # join() para formar a lista da array\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-08_17-58-07",
+            "content": "@@ -378,77 +378,25 @@\n   %0A%0A\n-#precisa formar em um str antes%0Aprint(%22, %22. join(str(obj) for obj in \n+print(%22, %22. join(\n list\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-11-08_18-00-17",
+            "content": "class NA:\n    def __init__(self, x: int):\n        self.x = x\n\n    def __str__(self):\n        return f'NA({self.x})'\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5]\nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\n\nlista_vazia.append(1) #adicionar no final\nlista_preenchida.append(NA(6)) #remover do final   \n\n#precisa formar em um str antes\nprint(\", \". join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array",
+            "lines": "16"
+        }
+    ]
+}

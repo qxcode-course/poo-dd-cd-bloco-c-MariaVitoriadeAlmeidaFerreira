@@ -43,3 +43,12 @@
 2025-11-08 16:45:59, SELF, v:1, k:poo@pula-pula, rate:100, alone:10, study:180
 2025-11-08 16:46:23, MOVE, v:1, k:poo@array, mode:PICK
 2025-11-08 16:46:25, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-08 16:50:28, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-08 16:50:29, EXEC, v:1, k:poo@array, mode:LOCK, rate:100, size:13
+2025-11-08 16:50:32, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-08 16:51:06, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-08 17:54:54, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-08 17:58:07, EXEC, v:1, k:poo@array, mode:FREE, size:15
+2025-11-08 17:58:19, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-08 17:58:19, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-08 18:00:17, EXEC, v:1, k:poo@array, mode:FREE, size:16

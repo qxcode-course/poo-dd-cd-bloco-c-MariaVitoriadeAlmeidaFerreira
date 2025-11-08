@@ -32,3 +32,9 @@
 2025-11-08 16:06:34, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:20
 2025-11-08 16:07:30, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:60, size:92
 2025-11-08 16:13:11, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:60
+2025-11-08 16:30:14, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:92
+2025-11-08 16:31:13, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:20, size:91
+2025-11-08 16:31:47, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:90, size:91
+2025-11-08 16:34:51, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:0, size:91
+2025-11-08 16:35:42, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:90, size:91
+2025-11-08 16:38:51, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:100, size:91

@@ -9,10 +9,10 @@ class Kid:
     def getAge(self) -> int:
         return self.__age
 
-    def setAge(self, age: int) -> int:
+    def setAge(self, age: int):
         self.__age = age
     
-    def setName(self, name: str) -> str:
+    def setName(self, name: str):
         self.__name = name
     
     def __str__(self) -> str:
@@ -24,18 +24,17 @@ class pulaP:
         self.__esperar: list[Kid] = []
 
     def __removeFromList(self, name: str, lista: list[Kid]) -> Kid | None:
-       for i, Kid in enumerate(lista):
+        for i, Kid in enumerate(lista):
            if Kid.getName() == name:
-               return lista.pop(i) #remove a crianca da primeira posicao
-           return None
+                return lista.pop(i) #remove a crianca da primeira posicao
+        return None
         
     def arrive(self, kid: Kid) -> None:
         self.__esperar.insert(0, kid) # a criança chegou
 
     def enter (self) -> None:
-        if self.__esperar:
-            crianca = self.__esperar.pop()
-            self.__bricando.append(crianca) #ficou na ultima posicao
+        crianca = self.__esperar.pop()
+        self.__bricando = [crianca] + self.__bricando
 
     def leave(self) -> None:
         if self.__bricando:
@@ -54,7 +53,7 @@ class pulaP:
         crianca = self.__removeFromList(name, self.__bricando)
         if crianca is not None:
             return crianca
-        print("fail: {name} nao esta no pula-pula")
+        print(f"fail: {name} nao esta no pula-pula")
         
 
 def main():

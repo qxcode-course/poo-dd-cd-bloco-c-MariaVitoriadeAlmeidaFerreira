@@ -18,7 +18,9 @@ lista_preencida_objetos.append(NA(6)) #adiciona um novo objeto
 lista_preenchida.remove(3) # remove o valor 3
 obj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA
 
-lista_preenchida.insert(2, 13) #inserindo 13 na 4 posicao
+
+lista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao
+lista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao
 
 returno = " ".join(lista_frase) #tirando os espaços
 
@@ -26,6 +28,9 @@ pN = lista_preenchida[0] # vai para o primeiro obj
 uObj = lista_preenchida[-1] # vai para o ultimo obj
 
 x = 4 in lista_preenchida #verificar se tem o 4 na lista
+
+for i in range(len(lista_preenchida)):
+    print (f"teste {i}: valor = {lista_preenchida[i]})
 
 
 print("lista preenchida:", lista_preenchida)
@@ -37,4 +42,4 @@ print("frase bem feita:", returno)
 print("primeiro objeto:", pN)
 print("Ultimo Objeto:", uObj)
 print("tem esse valor?", x) # true ou false
-print
+print("vazio:", lista_vazia)

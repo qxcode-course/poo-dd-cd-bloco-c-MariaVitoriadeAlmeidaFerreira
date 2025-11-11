@@ -27,8 +27,28 @@
         },
         {
             "label": "2025-11-11_15-42-46",
-            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA\n\nlista_preenchida.insert(2, 13) #inserindo 13 na 4 posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido:\", obj_removido)\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false",
+            "content": "@@ -1237,33 +1237,4 @@\n alse\n-%0Aprint(%22vazio:%22, lista_vazia)\n",
             "lines": "39"
+        },
+        {
+            "label": "2025-11-11_15-45-37",
+            "content": "@@ -561,17 +561,16 @@\n iro NA%0A%0A\n-%0A\n lista_pr\n@@ -585,17 +585,17 @@\n .insert(\n-0\n+2\n , 13) #i\n@@ -613,72 +613,9 @@\n  na \n-1 posicao%0Alista_preenchida.insert(4, 22) #inserindo 22 na ultima\n+4\n  pos\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-11_15-48-15",
+            "content": "@@ -644,17 +644,17 @@\n .insert(\n-5\n+4\n , 22) #i\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-11_15-48-21",
+            "content": "@@ -903,103 +903,8 @@\n ta%0A%0A\n-for i in range(len(lista_preenchida)):%0A    print (f%22teste %7Bi%7D: valor = %7Blista_preenchida%5Bi%5D%7D)%0A%0A\n %0Apri\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-11_15-53-43",
+            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA\n\n\nlista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao\nlista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\nfor i in range(len(lista_preenchida)):\n    print (f\"teste {i}: valor = {lista_preenchida[i]})\n\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido:\", obj_removido)\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false\nprint(\"vazio:\", lista_vazia)",
+            "lines": "45"
         }
     ]
 }

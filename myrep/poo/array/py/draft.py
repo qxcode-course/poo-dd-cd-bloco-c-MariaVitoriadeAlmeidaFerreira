@@ -16,7 +16,8 @@ lista_vazia.append(1) #adicionar no final
 lista_preencida_objetos.append(NA(6)) #adiciona um novo objeto
 
 lista_preenchida.remove(3) # remove o valor 3
-obj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA
+obj_removidoB = lista_preencida_objetos.pop(0) #remove o primeiro NA
+obj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao
 
 
 lista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao
@@ -27,19 +28,35 @@ returno = " ".join(lista_frase) #tirando os espaços
 pN = lista_preenchida[0] # vai para o primeiro obj
 uObj = lista_preenchida[-1] # vai para o ultimo obj
 
+a = 5
+vetor_vazio = []
+for valor in lista_preenchida:
+    if valor != a:
+        vetor_vazio.append[valor]
+        
+
 x = 4 in lista_preenchida #verificar se tem o 4 na lista
 
+a = 5
+if a in lista_preenchida:
+    posicao = lista_preenchida.index(a) #encontrar 5 na lista
+    print(f"elemento {a} encontrando em {posicao}")
+else:
+    print(f"elemento {a} nao foi encontrado")
+
 for i in range(len(lista_preenchida)):
-    print (f"teste {i}: valor = {lista_preenchida[i]})
+    print(f"indice {i}: valor = {lista_preenchida[i]}")
 
 
 print("lista preenchida:", lista_preenchida)
 #precisa formar em um str antes
 print("Objs:", ", ".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array
-print("obj removido:", obj_removido)
+print("obj removido na primeira posicao:", obj_removidoA)
+print("obj removido na ultima posicao:", obj_removidoB)
 print("Frase separa:", lista_frase)
 print("frase bem feita:", returno)
 print("primeiro objeto:", pN)
 print("Ultimo Objeto:", uObj)
 print("tem esse valor?", x) # true ou false
-print("vazio:", lista_vazia)
+print("lista vazia:", lista_vazia)
+print("todos os valores removidos:", vetor_vazio)

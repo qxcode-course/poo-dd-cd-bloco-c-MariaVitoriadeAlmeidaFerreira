@@ -47,8 +47,43 @@
         },
         {
             "label": "2025-11-11_15-53-43",
-            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removido = lista_preencida_objetos.pop(0) #remove o primeiro NA\n\n\nlista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao\nlista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\nfor i in range(len(lista_preenchida)):\n    print (f\"teste {i}: valor = {lista_preenchida[i]})\n\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido:\", obj_removido)\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false\nprint(\"vazio:\", lista_vazia)",
+            "content": "@@ -947,17 +947,31 @@\n    print\n-(\n+ (f%22teste %7Bi%7D: \n valor = \n",
             "lines": "45"
+        },
+        {
+            "label": "2025-11-11_15-55-44",
+            "content": "@@ -948,17 +948,16 @@\n   print(\n-%22\n valor = \n@@ -977,17 +977,16 @@\n hida%5Bi%5D%7D\n-%22\n )%0A%0A%0Aprin\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-11_15-56-11",
+            "content": "@@ -953,19 +953,8 @@\n nt(%22\n-indice %7Bi%7D \n valo\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-11_15-56-40",
+            "content": "@@ -948,17 +948,16 @@\n   print(\n-f\n %22indice \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-11_15-56-45",
+            "content": "@@ -504,17 +504,16 @@\n removido\n-B\n  = lista\n@@ -564,82 +564,8 @@\n  NA%0A\n-obj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao%0A\n %0A%0Ali\n@@ -960,17 +960,16 @@\n dice %7Bi%7D\n-:\n  valor =\n@@ -1204,101 +1204,24 @@\n vido\n- na primeira posicao:%22, obj_removidoA)%0Aprint(%22obj removido na ultima posicao:%22, obj_removidoB\n+:%22, obj_removido\n )%0Apr\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-11_16-01-30",
+            "content": "@@ -978,211 +978,8 @@\n ta%0A%0A\n-a = 5%0Aif a in lista_preenchida:%0A    posicao = lista_preenchida.index(a) #encontrar 5 na lista%0A    print(f%22elemento %7Ba%7D encontrando em tal %7Bposicao%7D%22)%0Aelse:%0A    print(f%22elemento %7Ba%7D nao foi encontrado%22)%0A%0A\n for \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-11_16-08-06",
+            "content": "@@ -920,125 +920,8 @@\n bj%0A%0A\n-a = 5%0Avetor_vazio = %5B%5D%0Afor valor in lista_preenchida:%0A    if valor != a:%0A        vetor_vazio.append%5Bvalor%5D%0A        %0A%0A\n x = \n@@ -1108,16 +1108,20 @@\n ando em \n+tal \n %7Bposicao\n@@ -1756,27 +1756,21 @@\n %0Aprint(%22\n-lista \n vazi\n-a\n+o\n :%22, list\n@@ -1781,54 +1781,4 @@\n zia)\n-%0Aprint(%22todos os valores removidos:%22, vetor_vazio)\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-11_16-16-07",
+            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removidoB = lista_preencida_objetos.pop(0) #remove o primeiro NA\nobj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao\n\n\nlista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao\nlista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\na = 5\nvetor_vazio = []\nfor valor in lista_preenchida:\n    if valor != a:\n        vetor_vazio.append[valor]\n        \n\nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\na = 5\nif a in lista_preenchida:\n    posicao = lista_preenchida.index(a) #encontrar 5 na lista\n    print(f\"elemento {a} encontrando em {posicao}\")\nelse:\n    print(f\"elemento {a} nao foi encontrado\")\n\nfor i in range(len(lista_preenchida)):\n    print(f\"indice {i}: valor = {lista_preenchida[i]}\")\n\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido na primeira posicao:\", obj_removidoA)\nprint(\"obj removido na ultima posicao:\", obj_removidoB)\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false\nprint(\"lista vazia:\", lista_vazia)\nprint(\"todos os valores removidos:\", vetor_vazio)",
+            "lines": "62"
         }
     ]
 }

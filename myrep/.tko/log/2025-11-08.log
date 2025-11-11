@@ -58,3 +58,8 @@
 2025-11-08 18:19:24, MOVE, v:1, k:poo@array, mode:BACK
 2025-11-08 18:19:25, MOVE, v:1, k:poo@array, mode:PICK
 2025-11-08 18:19:26, EXEC, v:1, k:poo@array, mode:FREE
+2025-11-08 18:40:17, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-08 18:43:33, SELF, v:1, k:poo@array, rate:80, study:40
+2025-11-08 18:43:45, SELF, v:1, k:poo@array, rate:80, alone:8, study:40
+2025-11-08 18:44:45, SELF, v:1, k:poo@array, rate:90, guide:sim, alone:9, study:40
+2025-11-08 18:45:02, SELF, v:1, k:poo@array, rate:100, guide:sim, alone:9, study:40

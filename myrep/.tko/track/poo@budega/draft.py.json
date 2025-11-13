@@ -12,8 +12,23 @@
         },
         {
             "label": "2025-11-13_09-28-13",
-            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.__\n    ",
+            "content": "@@ -61,290 +61,8 @@\n f.__\n-nome = nome%0A%0A    def __str__(self):%0A        return self.__nome%0A%0Aclass Budega:%0A    def __init__(self, num_caixa: int):%0A        self.__caixa: list%5BPessoa %7C None%5D = %5B%5D%0A        for _ in range(num_caixa):%0A            self.__num_caixa.append(None)%0A        self.__espera: list%5BPessoa%5D = %5B%5D\n %0A   \n",
             "lines": "4"
+        },
+        {
+            "label": "2025-11-13_09-35-08",
+            "content": "@@ -348,13 +348,4 @@\n     \n-    %0A    \n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-11-13_09-37-46",
+            "content": "@@ -344,161 +344,16 @@\n  %5B%5D%0A\n-%0A    def __str__(self):%0A        return f%22%7Bself.__caixa%7D%5Cn%7Bself.__espera%7D%22%0A    %0Apessoa = Pessoa(%22Pedro%22)%0Aprint(pessoa)%0A%0Abudega = Budega(5)%0Aprint(budega) %0A\n+        \n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-11-13_09-40-09",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.__nome = nome\n\n    def __str__(self):\n        return self.__nome\n\nclass Budega:\n    def __init__(self, num_caixa: int):\n        self.__caixa: list[Pessoa | None] = []\n        for _ in range(num_caixa):\n            self.__num_caixa.append(None)\n        self.__espera: list[Pessoa] = []\n\n    def __str__(self):\n        return f\"{self.__caixa}\\n{self.__espera}\"\n    \npessoa = Pessoa(\"Pedro\")\nprint(pessoa)\n\nbudega = Budega(5)\nprint(budega) \n\n    ",
+            "lines": "24"
         }
     ]
 }

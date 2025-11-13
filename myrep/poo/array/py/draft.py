@@ -7,6 +7,9 @@ class NA:
         return f'NA({self.x})'
     #to string
 
+import random #importando uma biblioteca para criar uma lista aleatorio
+
+lista_aleatorio = [random.randint(1,100) for _ in range(5)]
 lista_vazia: list[int] = [] #lista vazia
 lista_preenchida: list[int] = [1, 2, 3, 4, 5] 
 lista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]
@@ -34,6 +37,12 @@ vetor_vazio = []
 for valor in lista_preenchida:
     if valor != b:
         vetor_vazio.append(valor)
+
+tamanho = len(lista_preenchida) #vericando o tamanho com len
+print(f"o tamanho da lista é {tamanho}")
+
+n = 10
+sequencia = list(range(n + 1))
         
 x = 4 in lista_preenchida #verificar se tem o 4 na lista
 
@@ -47,8 +56,11 @@ else:
 for i in range(len(lista_preenchida)):
     print(f"indice {i}: valor = {lista_preenchida[i]}")
 
+embaralhar = random.shuffle(lista_preenchida) #shuflle serve para embaralhar as ordens das variaveis
+
 
 limpar = lista_preenchida.clear() #limpa a lista
+
 
 print("lista preenchida:", lista_preenchida)
 #precisa formar em um str antes
@@ -56,6 +68,7 @@ print("Objs:", ", ".join(str(obj) for obj in lista_preencida_objetos)) # join() 
 print("obj removido na primeira posicao:", obj_removidoA)
 print("obj removido na ultima posicao:", obj_removidoB)
 print("Ordena a lista no lugar:", sorteio)
+print(f"o tamanho da lista é {tamanho}")
 print("Frase separa:", lista_frase)
 print("frase bem feita:", returno)
 print("primeiro objeto:", pN)
@@ -63,3 +76,6 @@ print("Ultimo Objeto:", uObj)
 print("tem esse valor?", x) # true ou false
 print("lista vazia:", limpar)
 print("todos os valores removidos:", vetor_vazio)
+print("sequencia da n:", sequencia)
+print("sequencia aleatoria:", lista_aleatorio)
+print("lista embaralhada:", embaralhar)

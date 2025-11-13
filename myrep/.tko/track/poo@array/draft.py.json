@@ -127,8 +127,38 @@
         },
         {
             "label": "2025-11-11_16-32-49",
-            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removidoB = lista_preencida_objetos.pop(0) #remove o primeiro NA\nobj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao\n\nsorteio  = sorted(lista_preenchida)\n\nlista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao\nlista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\nb = 5\nvetor_vazio = []\nfor valor in lista_preenchida:\n    if valor != b:\n        vetor_vazio.append(valor)\n        \nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\na = 5\nif a in lista_preenchida:\n    posicao = lista_preenchida.index(a) #encontrar 5 na lista\n    print(f\"elemento {a} encontrando em {posicao}\")\nelse:\n    print(f\"elemento {a} nao foi encontrado\")\n\nfor i in range(len(lista_preenchida)):\n    print(f\"indice {i}: valor = {lista_preenchida[i]}\")\n\n\nlimpar = lista_preenchida.clear() #limpa a lista\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido na primeira posicao:\", obj_removidoA)\nprint(\"obj removido na ultima posicao:\", obj_removidoB)\nprint(\"Ordena a lista no lugar:\", sorteio)\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false\nprint(\"lista vazia:\", limpar)\nprint(\"todos os valores removidos:\", vetor_vazio)",
+            "content": "@@ -1062,81 +1062,8 @@\n lor)\n-%0A%0Atamanho =len(lista_preenchida)%0Aprint(f%22o tamanho da lista %C3%A9 %7Btamanho%7D%22)\n %0A   \n",
             "lines": "65"
+        },
+        {
+            "label": "2025-11-11_16-50-49",
+            "content": "@@ -1069,17 +1069,16 @@\n amanho =\n- \n len(list\n@@ -1094,37 +1094,8 @@\n ida)\n- #vericando o tamanho com len\n %0Apri\n@@ -1135,49 +1135,8 @@\n o%7D%22)\n-%0A%0An = 10%0Asequencia = list(range(n + 1))%0A%0A\n %0A   \n@@ -1892,49 +1892,8 @@\n io)%0A\n-print(f%22o tamanho da lista %C3%A9 %7Btamanho%7D%22)%0A\n prin\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-11_16-53-05",
+            "content": "@@ -1201,16 +1201,18 @@\n n + 1))%0A\n+%0A%0A\n         \n@@ -2258,40 +2258,4 @@\n zio)\n-%0Aprint(%22sequencia da n:%22, sequencia)\n",
+            "lines": "74"
+        },
+        {
+            "label": "2025-11-11_16-54-51",
+            "content": "@@ -1614,17 +1614,16 @@\n  lista%0A%0A\n-%0A\n print(%22l\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-11-11_16-56-50",
+            "content": "@@ -145,141 +145,8 @@\n ng%0A%0A\n-import random #importando uma biblioteca para criar uma lista aleatorio%0A%0Alista_aleatorio = %5Brandom.randint(1,100) for _ in range(5)%5D%0A\n list\n@@ -2293,51 +2293,4 @@\n cia)\n-%0Aprint(%22sequencia aleatoria:%22, lista_aleatorio)\n",
+            "lines": "74"
+        },
+        {
+            "label": "2025-11-11_17-03-24",
+            "content": "@@ -1700,55 +1700,8 @@\n %22)%0A%0A\n-embaralhar = random.shuffle(lista_preenchida)%0A%0A\n %0Alim\n@@ -2473,44 +2473,4 @@\n rio)\n-%0Aprint(%22lista embaralhada:%22, embaralhar)\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-11_17-07-34",
+            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nimport random #importando uma biblioteca para criar uma lista aleatorio\n\nlista_aleatorio = [random.randint(1,100) for _ in range(5)]\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removidoB = lista_preencida_objetos.pop(0) #remove o primeiro NA\nobj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao\n\nsorteio  = sorted(lista_preenchida)\n\nlista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao\nlista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\nb = 5\nvetor_vazio = []\nfor valor in lista_preenchida:\n    if valor != b:\n        vetor_vazio.append(valor)\n\ntamanho = len(lista_preenchida) #vericando o tamanho com len\nprint(f\"o tamanho da lista \u00e9 {tamanho}\")\n\nn = 10\nsequencia = list(range(n + 1))\n        \nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\na = 5\nif a in lista_preenchida:\n    posicao = lista_preenchida.index(a) #encontrar 5 na lista\n    print(f\"elemento {a} encontrando em {posicao}\")\nelse:\n    print(f\"elemento {a} nao foi encontrado\")\n\nfor i in range(len(lista_preenchida)):\n    print(f\"indice {i}: valor = {lista_preenchida[i]}\")\n\nembaralhar = random.shuffle(lista_preenchida)\n\n\nlimpar = lista_preenchida.clear() #limpa a lista\n\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido na primeira posicao:\", obj_removidoA)\nprint(\"obj removido na ultima posicao:\", obj_removidoB)\nprint(\"Ordena a lista no lugar:\", sorteio)\nprint(f\"o tamanho da lista \u00e9 {tamanho}\")\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false\nprint(\"lista vazia:\", limpar)\nprint(\"todos os valores removidos:\", vetor_vazio)\nprint(\"sequencia da n:\", sequencia)\nprint(\"sequencia aleatoria:\", lista_aleatorio)\nprint(\"lista embaralhada:\", embaralhar)",
+            "lines": "81"
         }
     ]
 }

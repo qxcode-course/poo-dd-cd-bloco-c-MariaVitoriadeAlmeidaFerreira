@@ -7,8 +7,13 @@
         },
         {
             "label": "2025-11-06_13-22-01",
-            "content": "class Pessoa:\n    ",
+            "content": "@@ -15,55 +15,4 @@\n     \n-def __init__(self, nome: str):%0A        self.__%0A    \n",
             "lines": "2"
+        },
+        {
+            "label": "2025-11-13_09-28-13",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.__\n    ",
+            "lines": "4"
         }
     ]
 }

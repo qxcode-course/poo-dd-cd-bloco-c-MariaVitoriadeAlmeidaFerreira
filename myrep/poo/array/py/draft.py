@@ -38,6 +38,8 @@ for valor in lista_preenchida:
     if valor != b:
         vetor_vazio.append(valor)
 
+        
+
 tamanho = len(lista_preenchida) #vericando o tamanho com len
 print(f"o tamanho da lista é {tamanho}")
 

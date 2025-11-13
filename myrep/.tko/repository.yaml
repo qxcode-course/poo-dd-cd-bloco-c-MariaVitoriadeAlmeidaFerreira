@@ -12,14 +12,14 @@ sources:
   type: clone
   branch: master
   cache_path: C:\Users\almei\OneDrive\Documentos\Estudos_vitoria\poo-dd-cd-bloco-c-MariaVitoriadeAlmeidaFerreira\myrep\.tko\cache\poo\Readme.md
-  cache_timestamp: '2025-11-11 15:40:57'
+  cache_timestamp: '2025-11-13 09:06:00'
   filters:
   - listas
 expanded:
 - poo@campanha-principal
 - poo@bloco_c-listas
 tasks:
-  poo@array: '{rate:100, guide:sim, alone:9, study:40}'
+  poo@array: '{rate:100, guide:sim, alone:7, study:120}'
   poo@lapiseira: '{rate:100, human:Namorado, alone:9, study:120}'
   poo@pula-pula: '{rate:100, alone:10, study:180}'
 flags:

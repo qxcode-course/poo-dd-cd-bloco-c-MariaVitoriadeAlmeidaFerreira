@@ -12,7 +12,7 @@ sources:
   type: clone
   branch: master
   cache_path: C:\Users\almei\OneDrive\Documentos\Estudos_vitoria\poo-dd-cd-bloco-c-MariaVitoriadeAlmeidaFerreira\myrep\.tko\cache\poo\Readme.md
-  cache_timestamp: '2025-11-13 09:06:00'
+  cache_timestamp: '2025-11-16 16:58:20'
   filters:
   - listas
 expanded:

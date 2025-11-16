@@ -7,13 +7,17 @@ class Pessoa:
 
 class Budega:
     def __init__(self, num_caixa: int):
-        self.caixa: list[Pessoa | None] = [] * num_caixa
+        self.caixa: list[Pessoa | None] = [None] * num_caixa
         self.espera: list[Pessoa] = []
+    
+    def enter(self, pessoa: Pessoa):
+        self.espera.append(pessoa)
 
     def __str__(self):
-        caixa = ", ". join ([str (x) for x in self.caixa])
-        espera
-        return f"{self.caixa}\n{self.espera}"
+        self.caixa =[Pessoa("Maria"), None, Pessoa("Pedro")]
+        caixa = ", ".join (["----" if x is None else str (x) for x in self.caixa])
+        espera = ", ".join ([str (x) for x in self.espera])
+        return f"caixas:{caixa}\nfila de espera:{espera}"
     
 pessoa = Pessoa("Pedro")
 print(pessoa)

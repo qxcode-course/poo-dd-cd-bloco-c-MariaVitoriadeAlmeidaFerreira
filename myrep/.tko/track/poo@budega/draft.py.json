@@ -27,8 +27,38 @@
         },
         {
             "label": "2025-11-13_09-40-09",
-            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.__nome = nome\n\n    def __str__(self):\n        return self.__nome\n\nclass Budega:\n    def __init__(self, num_caixa: int):\n        self.__caixa: list[Pessoa | None] = []\n        for _ in range(num_caixa):\n            self.__num_caixa.append(None)\n        self.__espera: list[Pessoa] = []\n\n    def __str__(self):\n        return f\"{self.__caixa}\\n{self.__espera}\"\n    \npessoa = Pessoa(\"Pedro\")\nprint(pessoa)\n\nbudega = Budega(5)\nprint(budega) \n\n    ",
+            "content": "@@ -51,24 +51,26 @@\n        self.\n+__\n nome = nome%0A\n@@ -113,16 +113,18 @@\n rn self.\n+__\n nome%0A%0Acl\n@@ -184,24 +184,26 @@\n        self.\n+__\n caixa: list%5B\n@@ -225,11 +225,32 @@\n = %5B%5D\n- * \n+%0A        for _ in range(\n num_\n@@ -254,17 +254,23 @@\n um_caixa\n-%0A\n+):%0A    \n         \n@@ -270,24 +270,64 @@\n        self.\n+__num_caixa.append(None)%0A        self.__\n espera: list\n@@ -368,126 +368,8 @@\n f):%0A\n-        caixa = %22, %22.join (%5Bstr (x) for x in self.caixa%5D)%0A        espera = %22, %22.join (%5Bstr (x) for x in self.espera%5D)%0A\n     \n@@ -387,16 +387,18 @@\n f%22%7Bself.\n+__\n caixa%7D%5Cn\n@@ -403,16 +403,18 @@\n %5Cn%7Bself.\n+__\n espera%7D%22\n@@ -482,62 +482,8 @@\n (5)%0A\n-budega.caixa%5B2%5D = pessoa%0Abudega.espera.append(pessoa)%0A\n prin\n",
             "lines": "24"
+        },
+        {
+            "label": "2025-11-13_09-53-25",
+            "content": "@@ -427,16 +427,21 @@\n turn f%22%7B\n+self.\n caixa%7D%5Cn\n@@ -441,16 +441,21 @@\n aixa%7D%5Cn%7B\n+self.\n espera%7D%22\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-13_09-56-27",
+            "content": "@@ -430,15 +430,8 @@\n n f%22\n-caixas:\n %7Bcai\n@@ -439,23 +439,8 @@\n a%7D%5Cn\n-fila de espera:\n %7Besp\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-16_16-59-22",
+            "content": "@@ -214,20 +214,16 @@\n one%5D = %5B\n-None\n %5D * num_\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-16_17-02-34",
+            "content": "@@ -327,33 +327,8 @@\n n (%5B\n-%22----%22 if x is None else \n str \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-16_17-05-15",
+            "content": "@@ -299,69 +299,8 @@\n f):%0A\n-        self.caixa =%5BPessoa(%22Maria%22), None, Pessoa(%22Pedro%22)%5D%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-16_17-07-39",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\nclass Budega:\n    def __init__(self, num_caixa: int):\n        self.caixa: list[Pessoa | None] = [None] * num_caixa\n        self.espera: list[Pessoa] = []\n\n    def __str__(self):\n        self.caixa =[Pessoa(\"Maria\"), None, Pessoa(\"Pedro\")]\n        caixa = \", \".join ([\"----\" if x is None else str (x) for x in self.caixa])\n        espera = \", \".join ([str (x) for x in self.espera])\n        return f\"caixas:{caixa}\\nfila de espera:{espera}\"\n    \npessoa = Pessoa(\"Pedro\")\nprint(pessoa)\n\nbudega = Budega(5)\nbudega.caixa[2] = pessoa\nbudega.espera.append(pessoa)\nprint(budega) \n\n    ",
+            "lines": "27"
         }
     ]
 }

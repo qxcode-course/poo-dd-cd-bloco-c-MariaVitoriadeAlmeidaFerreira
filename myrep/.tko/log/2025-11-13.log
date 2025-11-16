@@ -14,3 +14,7 @@
 2025-11-13 09:40:14, MOVE, v:1, k:poo@budega, mode:PICK
 2025-11-13 09:40:15, EXEC, v:1, k:poo@budega, mode:FREE
 2025-11-13 09:50:17, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-13 09:51:42, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-13 09:53:25, EXEC, v:1, k:poo@budega, mode:FREE, size:26
+2025-11-13 09:56:27, EXEC, v:1, k:poo@budega, mode:FREE, size:26
+2025-11-13 09:57:33, MOVE, v:1, k:poo@budega, mode:BACK

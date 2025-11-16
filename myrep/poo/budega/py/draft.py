@@ -7,14 +7,18 @@ class Pessoa:
 
 class Budega:
     def __init__(self, num_caixa: int):
+        self.num_caixa = num_caixa
         self.caixa: list[Pessoa | None] = [None] * num_caixa
         self.espera: list[Pessoa] = []
+        for _ in range(self.num_caixa):
+            self.caixa.append(None)
+            self.espera = []
 
     def call(self, index: int):
-        if index < 0 or index >= len(self.caixa):
+        if index < 0 or index >= len(self.espera):
             print("fail: caixa inexcistente")
             return
-        if self.caixa is not None:
+        if self.espera is not None:
             print("fail: caixa ocupado")
             return
         if len(self.espera) == 0:
@@ -36,21 +40,26 @@ class Budega:
 
     def giveUp(self, nome:str):
         for i, pessoa in enumerate(self.espera):
-            
-
+            if pessoa.nome == nome:
+                aux = self.espera[i]
+                del self.espera[i]
+                return aux
 
     def __str__(self):
-        self.caixa =[Pessoa("Maria"), None, Pessoa("Pedro")]
-        caixa = ", ".join (["----" if x is None else str (x) for x in self.caixa])
+        caixa = ", ".join (["-----" if x is None else str (x) for x in self.caixa])
         espera = ", ".join ([str (x) for x in self.espera])
-        return f"caixas:{caixa}\nfila de espera:{espera}"
+        return f"Caixas: [{caixa}]\nEspera: [{espera}]\n"
     
-pessoa = Pessoa("Pedro")
-print(pessoa)
+def main():
+    budega = Budega(0)
+    while True:
+        line: str = input()
+        print("$" + line)
+        args: list[str] = line.split(" ")
+        if args[0] == "end":
+            break
+        elif args[0] == "show":
+            print(budega)
+       
 
-budega = Budega(5)
-budega.enter(Pessoa("Vitoria"))
-budega.enter(Pessoa("Ph"))
-
-print(budega)
-    
+main()

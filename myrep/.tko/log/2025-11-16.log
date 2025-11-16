@@ -116,3 +116,11 @@
 2025-11-16 18:49:35, MOVE, v:1, k:poo@budega, mode:BACK
 2025-11-16 18:50:16, SELF, v:1, k:poo@budega, rate:100, guide:video, alone:6, study:160
 2025-11-16 18:51:47, SELF, v:1, k:poo@budega, rate:100, guide:video, alone:8, study:160
+2025-11-16 18:52:22, SELF, v:1, k:poo@budega, rate:100, guide:video, alone:8, study:180
+2025-11-16 18:56:24, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-16 18:56:25, EXEC, v:1, k:poo@budega, mode:FULL, rate:100
+2025-11-16 18:58:14, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-16 18:59:12, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-16 18:59:50, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-16 18:59:52, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-16 18:59:53, EXEC, v:1, k:poo@array, mode:LOCK, rate:0

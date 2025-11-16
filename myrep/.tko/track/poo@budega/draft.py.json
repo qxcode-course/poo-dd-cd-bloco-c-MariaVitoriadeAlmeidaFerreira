@@ -242,8 +242,28 @@
         },
         {
             "label": "2025-11-16_17-57-34",
-            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\nclass Budega:\n    def __init__(self, num_caixa: int):\n        self.num_caixa = num_caixa\n        self.caixa: list[Pessoa | None] = [None] * num_caixa\n        self.espera: list[Pessoa] = []\n        for _ in range(self.num_caixa):\n            self.caixa.append(None)\n            self.espera = []\n\n    def call(self, index: int):\n        if index < 0 or index >= len(self.espera):\n            print(\"fail: caixa inexcistente\")\n            return\n        if self.espera is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if len(self.espera) == 0:\n            print (\"fail: caixa vazio\")\n            return\n        self.caixa[index] = self.espera[0]\n        del self.espera[0]\n\n    def enter(self, pessoa: Pessoa):\n        self.espera.append(pessoa)\n    \n    def finish(self, index:int):\n        if index < 0 or index >= len(self.caixa):\n            print(\"indice ine\")\n            return\n        if self.caixa[index] is None:\n            print(\"fail: caixa ocupado\")\n        self.caixa[index] = None\n\n    def giveUp(self, nome:str):\n        for i, pessoa in enumerate(self.espera):\n            if pessoa.nome == nome:\n                aux = self.espera[i]\n                del self.espera[i]\n                return aux\n\n    def __str__(self):\n        caixa = \", \".join ([\"-----\" if x is None else str (x) for x in self.caixa])\n        espera = \", \".join ([str (x) for x in self.espera])\n        return f\"Caixas: [{caixa}]\\nEspera: [{espera}]\\n\"\n    \ndef main():\n    budega = Budega(0)\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(budega)\n       \n\nmain()",
+            "content": "@@ -1847,15 +1847,19 @@\n ga)%0A    \n+   %0A\n %0Amain()\n",
             "lines": "65"
+        },
+        {
+            "label": "2025-11-16_17-59-31",
+            "content": "@@ -305,16 +305,121 @@\n oa%5D = %5B%5D\n+%0A        for _ in range(self.num_caixa):%0A            self.caixa.append(None)%0A            self.espera = %5B%5D\n %0A%0A    de\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-16_18-02-49",
+            "content": "@@ -306,24 +306,16 @@\n a%5D = %5B%5D%0A\n-        \n %0A    def\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-16_18-04-53",
+            "content": "@@ -306,16 +306,24 @@\n a%5D = %5B%5D%0A\n+        \n %0A    def\n@@ -1530,9 +1530,9 @@\n ega(\n-2\n+0\n )%0A  \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-16_18-05-30",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\nclass Budega:\n    def __init__(self, num_caixa: int):\n        self.num_caixa = num_caixa\n        self.caixa: list[Pessoa | None] = [None] * num_caixa\n        self.espera: list[Pessoa] = []\n\n    def call(self, index: int):\n        if index < 0 or index >= len(self.espera):\n            print(\"fail: caixa inexcistente\")\n            return\n        if self.espera is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if len(self.espera) == 0:\n            print (\"fail: caixa vazio\")\n            return\n        self.caixa[index] = self.espera[0]\n        del self.espera[0]\n\n    def enter(self, pessoa: Pessoa):\n        self.espera.append(pessoa)\n    \n    def finish(self, index:int):\n        if index < 0 or index >= len(self.caixa):\n            print(\"indice ine\")\n            return\n        if self.caixa[index] is None:\n            print(\"fail: caixa ocupado\")\n        self.caixa[index] = None\n\n    def giveUp(self, nome:str):\n        for i, pessoa in enumerate(self.espera):\n            if pessoa.nome == nome:\n                aux = self.espera[i]\n                del self.espera[i]\n                return aux\n\n    def __str__(self):\n        caixa = \", \".join ([\"-----\" if x is None else str (x) for x in self.caixa])\n        espera = \", \".join ([str (x) for x in self.espera])\n        return f\"Caixas: [{caixa}]\\nEspera: [{espera}]\\n\"\n    \ndef main():\n    budega = Budega(2)\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(budega)\n    \nmain()",
+            "lines": "61"
         }
     ]
 }

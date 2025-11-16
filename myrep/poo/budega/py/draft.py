@@ -10,9 +10,6 @@ class Budega:
         self.num_caixa = num_caixa
         self.caixa: list[Pessoa | None] = [None] * num_caixa
         self.espera: list[Pessoa] = []
-        for _ in range(self.num_caixa):
-            self.caixa.append(None)
-            self.espera = []
 
     def call(self, index: int):
         if index < 0 or index >= len(self.espera):
@@ -51,7 +48,7 @@ class Budega:
         return f"Caixas: [{caixa}]\nEspera: [{espera}]\n"
     
 def main():
-    budega = Budega(0)
+    budega = Budega(2)
     while True:
         line: str = input()
         print("$" + line)
@@ -60,6 +57,6 @@ def main():
             break
         elif args[0] == "show":
             print(budega)
-       
-
+        elif args == "call":
+    
 main()

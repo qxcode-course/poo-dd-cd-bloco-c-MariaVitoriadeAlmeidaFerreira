@@ -167,8 +167,188 @@
         },
         {
             "label": "2025-11-13_09-25-50",
-            "content": "class NA:\n    def __init__(self, N: int):\n        self.x = N\n    #construtor\n\n    def __str__(self):\n        return f'NA({self.x})'\n    #to string\n\nimport random #importando uma biblioteca para criar uma lista aleatorio\n\nlista_aleatorio = [random.randint(1,100) for _ in range(5)]\nlista_vazia: list[int] = [] #lista vazia\nlista_preenchida: list[int] = [1, 2, 3, 4, 5] \nlista_preencida_objetos: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nlista_vazia.append(1) #adicionar no final\nlista_preencida_objetos.append(NA(6)) #adiciona um novo objeto\n\nlista_preenchida.remove(3) # remove o valor 3\nobj_removidoB = lista_preencida_objetos.pop(0) #remove o primeiro NA\nobj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao\n\nsorteio  = sorted(lista_preenchida)\n\nlista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao\nlista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao\n\nreturno = \" \".join(lista_frase) #tirando os espa\u00e7os\n\npN = lista_preenchida[0] # vai para o primeiro obj\nuObj = lista_preenchida[-1] # vai para o ultimo obj\n\nb = 5\nvetor_vazio = []\nfor valor in lista_preenchida:\n    if valor != b:\n        vetor_vazio.append(valor)\n\n        \n\ntamanho = len(lista_preenchida) #vericando o tamanho com len\nprint(f\"o tamanho da lista \u00e9 {tamanho}\")\n\nn = 10\nsequencia = list(range(n + 1))\n        \nx = 4 in lista_preenchida #verificar se tem o 4 na lista\n\na = 5\nif a in lista_preenchida:\n    posicao = lista_preenchida.index(a) #encontrar 5 na lista\n    print(f\"elemento {a} encontrando em {posicao}\")\nelse:\n    print(f\"elemento {a} nao foi encontrado\")\n\nfor i in range(len(lista_preenchida)):\n    print(f\"indice {i}: valor = {lista_preenchida[i]}\")\n\nembaralhar = random.shuffle(lista_preenchida) #shuflle serve para embaralhar as ordens das variaveis\n\n\nlimpar = lista_preenchida.clear() #limpa a lista\n\n\nprint(\"lista preenchida:\", lista_preenchida)\n#precisa formar em um str antes\nprint(\"Objs:\", \", \".join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array\nprint(\"obj removido na primeira posicao:\", obj_removidoA)\nprint(\"obj removido na ultima posicao:\", obj_removidoB)\nprint(\"Ordena a lista no lugar:\", sorteio)\nprint(f\"o tamanho da lista \u00e9 {tamanho}\")\nprint(\"Frase separa:\", lista_frase)\nprint(\"frase bem feita:\", returno)\nprint(\"primeiro objeto:\", pN)\nprint(\"Ultimo Objeto:\", uObj)\nprint(\"tem esse valor?\", x) # true ou false\nprint(\"lista vazia:\", limpar)\nprint(\"todos os valores removidos:\", vetor_vazio)\nprint(\"sequencia da n:\", sequencia)\nprint(\"sequencia aleatoria:\", lista_aleatorio)\nprint(\"lista embaralhada:\", embaralhar)",
+            "content": "@@ -1,8 +1,2628 @@\n class NA\n+:%0A    def __init__(self, N: int):%0A        self.x = N%0A    #construtor%0A%0A    def __str__(self):%0A        return f'NA(%7Bself.x%7D)'%0A    #to string%0A%0Aimport random #importando uma biblioteca para criar uma lista aleatorio%0A%0Alista_aleatorio = %5Brandom.randint(1,100) for _ in range(5)%5D%0Alista_vazia: list%5Bint%5D = %5B%5D #lista vazia%0Alista_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D %0Alista_preencida_objetos: list%5BNA%5D = %5BNA(1), NA(2), NA(3), NA(4), NA(5)%5D%0Alista_frase = %5B%22ola%22, %22tudo%22, %22bem?%22%5D%0A%0Alista_vazia.append(1) #adicionar no final%0Alista_preencida_objetos.append(NA(6)) #adiciona um novo objeto%0A%0Alista_preenchida.remove(3) # remove o valor 3%0Aobj_removidoB = lista_preencida_objetos.pop(0) #remove o primeiro NA%0Aobj_removidoA = lista_preencida_objetos.pop(-1) #remove na ultimo posicao%0A%0Asorteio  = sorted(lista_preenchida)%0A%0Alista_preenchida.insert(0, 13) #inserindo 13 na 1 posicao%0Alista_preenchida.insert(5, 22) #inserindo 22 na ultima posicao%0A%0Areturno = %22 %22.join(lista_frase) #tirando os espa%C3%A7os%0A%0ApN = lista_preenchida%5B0%5D # vai para o primeiro obj%0AuObj = lista_preenchida%5B-1%5D # vai para o ultimo obj%0A%0Ab = 5%0Avetor_vazio = %5B%5D%0Afor valor in lista_preenchida:%0A    if valor != b:%0A        vetor_vazio.append(valor)%0A%0A        %0A%0Atamanho = len(lista_preenchida) #vericando o tamanho com len%0Aprint(f%22o tamanho da lista %C3%A9 %7Btamanho%7D%22)%0A%0An = 10%0Asequencia = list(range(n + 1))%0A        %0Ax = 4 in lista_preenchida #verificar se tem o 4 na lista%0A%0Aa = 5%0Aif a in lista_preenchida:%0A    posicao = lista_preenchida.index(a) #encontrar 5 na lista%0A    print(f%22elemento %7Ba%7D encontrando em %7Bposicao%7D%22)%0Aelse:%0A    print(f%22elemento %7Ba%7D nao foi encontrado%22)%0A%0Afor i in range(len(lista_preenchida)):%0A    print(f%22indice %7Bi%7D: valor = %7Blista_preenchida%5Bi%5D%7D%22)%0A%0Aembaralhar = random.shuffle(lista_preenchida) #shuflle serve para embaralhar as ordens das variaveis%0A%0A%0Alimpar = lista_preenchida.clear() #limpa a lista%0A%0A%0Aprint(%22lista preenchida:%22, lista_preenchida)%0A#precisa formar em um str antes%0Aprint(%22Objs:%22, %22, %22.join(str(obj) for obj in lista_preencida_objetos)) # join() para formar a lista da array%0Aprint(%22obj removido na primeira posicao:%22, obj_removidoA)%0Aprint(%22obj removido na ultima posicao:%22, obj_removidoB)%0Aprint(%22Ordena a lista no lugar:%22, sorteio)%0Aprint(f%22o tamanho da lista %C3%A9 %7Btamanho%7D%22)%0Aprint(%22Frase separa:%22, lista_frase)%0Aprint(%22frase bem feita:%22, returno)%0Aprint(%22primeiro objeto:%22, pN)%0Aprint(%22Ultimo Objeto:%22, uObj)%0Aprint(%22tem esse valor?%22, x) # true ou false%0Aprint(%22lista vazia:%22, limpar)%0Aprint(%22todos os valores removidos:%22, vetor_vazio)%0Aprint(%22sequencia da n:%22, sequencia)%0Aprint(%22sequencia aleatoria:%22, lista_aleatorio)%0Aprint(%22lista embaralhada:%22, embaralhar)\n",
             "lines": "83"
+        },
+        {
+            "label": "2025-11-16_19-02-38",
+            "content": "@@ -5,111 +5,4 @@\n s NA\n-: %0A    def __init__(self, N: int):%0A        self.x = N%0A%0A    def __Str__(self)%0A        return f%22NA(%7Bself.x%7D)%22\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-11-16_19-03-39",
+            "content": "@@ -77,17 +77,16 @@\n __(self)\n-:\n %0A       \n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-16_19-03-44",
+            "content": "@@ -1,19 +1,4 @@\n-import random%0A%0A\n clas\n@@ -113,85 +113,4 @@\n x%7D)%22\n-%0A    %0Alista_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Aprint (lista_preenchida)%0A    \n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-16_19-05-20",
+            "content": "@@ -133,21 +133,8 @@\n     \n-%0A%0A#######    \n %0Alis\n@@ -187,258 +187,26 @@\n nt (\n-%22lista preenchida com numeros:%5Cn%22, lista_preenchida)%0A%0A########%0A%0Alista_vazia: list%5Bint%5D = %5B%5D%0Aprint(%22lista vazia:%5Cn%22,lista_vazia)%0A%0A#######%0A%0Alista_preenchida_obj: list%5BNA%5D = %5BNA(1), NA(2), NA(3)%5D%0Aprint(%22Lista preenchida com objetos:%5Cn%22,lista_preenchida_obj)\n+lista_preenchida)%0A    \n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-11-16_19-09-31",
+            "content": "@@ -391,22 +391,8 @@\n A(3)\n-, NA(4), NA(5)\n %5D%0Apr\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-16_19-10-01",
+            "content": "@@ -344,68 +344,128 @@\n sta_\n-frase = %5B%22ola%22, %22tudo%22, %22bem?%22\n+preenchida_obj: list%5BNA%5D = %5BNA(1), NA(2), NA(3), NA(4), NA(5)\n %5D%0Aprint\n- \n (%22\n-saudacao:\n+Lista preenchida com objetos:%5Cn\n %22,\n- \n lista_\n-frase\n+preenchida_obj\n )\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-16_19-11-29",
+            "content": "@@ -376,39 +376,8 @@\n ?%22%5D%0A\n-index = %22 %22. join(lista_frase)%0A\n prin\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-16_19-13-12",
+            "content": "@@ -146,106 +146,69 @@\n     \n+%0A\n lista\n-s iniciais ##############%0Alista_aleatoria = %5Brandom.randint(1, 100) for _ in range(5)%5D%0A\n+_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Aprint (%22\n lista\n-_\n+ \n pree\n@@ -217,301 +217,214 @@\n hida\n-: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Alista_vazia: list%5Bint%5D = %5B%5D%0Alista_obj: list%5BNA%5D = %5BNA(1), NA(2), NA(3), NA(4), NA(5)%5D%0Alista_frase = %5B%22ola%22, %22tudo%22, %22bem?%22%5D%0A%0Aprint(lista_aleatoria)%0Aprint(%22lista preenchida:%22, lista_preenchida)%0Aprint(%22lista vazia:%22, lista_vazia)%0Apr\n+ com numeros:%5Cn%22, lista_preenchida)%0A%0A########%0A%0Alista_vazia: list%5Bint%5D = %5B%5D%0Aprint(%22lista vazia:%5Cn%22,lista_vazia)%0A%0A#######%0A%0Alista_frase = %5B%22ola%22, %22tudo%22, %22bem?%22%5D%0Aindex = %22 %22. jo\n in\n-t\n (lista_\n-obj\n+frase\n )%0Aprint\n+ \n (%22\n-lista frase\n+saudacao\n :%22, \n@@ -435,10 +435,8 @@\n a_frase)\n-%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-16_19-20-37",
+            "content": "@@ -518,33 +518,8 @@\n int(\n-%22%22.join(str (x) for x in \n list\n@@ -524,17 +524,16 @@\n sta_obj)\n-)\n %0Aprint(%22\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-16_19-21-26",
+            "content": "@@ -515,18 +515,16 @@\n %0Aprint(%22\n-, \n %22.join(s\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-16_19-21-38",
+            "content": "@@ -587,33 +587,10 @@\n a_frase)\n-%0Aprint(lista_aleatoria)\n %0A%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-17_13-58-11",
+            "content": "@@ -598,26 +598,8 @@\n int(\n-%22lista aleatoria%22,\n list\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-17_13-58-47",
+            "content": "@@ -411,29 +411,31 @@\n %0A%0Aprint(\n-%22-----------%22\n+lista_aleatoria\n )%0Aprint(\n@@ -634,26 +634,4 @@\n a)%0A%0A\n-print(%22-----------%22)%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-17_13-59-21",
+            "content": "@@ -506,16 +506,61 @@\n _vazia)%0A\n+print(%22, %22.join(str (x) for x in lista_obj))%0A\n print(%22l\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-17_14-00-13",
+            "content": "@@ -81,17 +81,17 @@\n   def __\n-s\n+S\n tr__(sel\n@@ -510,53 +510,8 @@\n ia)%0A\n-print(%22, %22.join(str (x) for x in lista_obj))%0A\n prin\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-17_14-01-25",
+            "content": "@@ -654,377 +654,4 @@\n %22)%0A%0A\n-%0A######### adicoes e remocao ###############%0A%0Alista_vazia.append(1)%0Alista_obj.append(NA(6))%0A%0Alista_preenchida.remove(3)%0A%0Aobj_rev_primeira = lista_obj.pop(0)%0Aobj_rev_ultimo = lista_obj.pop(-1)%0A%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22lista preenchida:%22,lista_preenchida)%0Aprint(%22Primeiro objeto removido:%22, obj_rev_primeira)%0Aprint(%22Ultimo objeto removido:%22, obj_rev_ultimo)\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-17_14-06-42",
+            "content": "@@ -847,34 +847,8 @@\n 1)%0A%0A\n-print(%22adi%C3%A7%C3%A3o e remo%C3%A7%C3%A3o%22)%0A\n prin\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-17_14-07-34",
+            "content": "@@ -870,10 +870,8 @@\n o%C3%A7%C3%A3o\n-%5Cn\n %22)%0Ap\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-17_14-07-40",
+            "content": "@@ -646,18 +646,16 @@\n --------\n-%5Cn\n %22)%0A%0A%0A###\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-17_14-07-49",
+            "content": "@@ -423,18 +423,16 @@\n --------\n-%5Cn\n %22)%0Aprint\n@@ -1057,28 +1057,4 @@\n imo)\n-%0A%0Aprint(%22-----------%5Cn%22)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-11-17_14-08-14",
+            "content": "@@ -423,16 +423,18 @@\n --------\n+%5Cn\n %22)%0Aprint\n@@ -1083,27 +1083,4 @@\n %5Cn%22)\n-%0A%0A%0A###########ordena%C3%A7%C3%A3o\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-11-17_14-08-45",
+            "content": "@@ -1104,115 +1104,4 @@\n a%C3%A7%C3%A3o\n-##############%0A%0Asorteio = sorted(lista_preenchida)%0Aprint(%22lista ordenada:%22, sorteio)%0A%0Aprint(%22-----------%5Cn%22)%0A%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-17_14-09-48",
+            "content": "@@ -1154,28 +1154,8 @@\n ida)\n-%0A%0Aprint(%22Ordena%C3%A7%C3%A3o%22)\n %0Apri\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-17_14-10-12",
+            "content": "@@ -1205,16 +1205,17 @@\n orteio)%0A\n+%0A\n print(%22-\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-17_14-10-17",
+            "content": "@@ -1168,18 +1168,16 @@\n rdena%C3%A7%C3%A3o\n-%5Cn\n %22)%0Aprint\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-17_14-10-22",
+            "content": "@@ -1173,17 +1173,16 @@\n %C3%A7%C3%A3o%5Cn%22)%0A\n-%0A\n print(%22l\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-17_14-10-36",
+            "content": "@@ -1173,38 +1173,16 @@\n %C3%A7%C3%A3o%5Cn%22)%0A\n-print(%22-----------%5Cn%22)\n %0Aprint(%22\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-17_14-10-37",
+            "content": "@@ -1183,32 +1183,34 @@\n int(%22-----------\n+%5Cn\n %22)%0Aprint(%22lista \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-17_14-10-43",
+            "content": "@@ -1191,18 +1191,16 @@\n --------\n-%5Cn\n %22)%0Aprint\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-17_14-10-53",
+            "content": "@@ -1168,16 +1168,18 @@\n rdena%C3%A7%C3%A3o\n+%5Cn\n %22)%0Aprint\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-17_14-10-54",
+            "content": "@@ -1168,18 +1168,16 @@\n rdena%C3%A7%C3%A3o\n-%5Cn\n %22)%0Aprint\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-17_14-11-03",
+            "content": "@@ -1,1073 +1,74 @@\n-import random%0A%0Aclass NA: %0A    def __init__(self, N: int):%0A        self.x = N%0A%0A    def __str__(self):%0A        return f%22NA(%7Bself.x%7D)%22%0A    %0A%0A#######    listas iniciais ##############%0Alista_aleatoria = %5Brandom.randint(1, 100) for _ in range(5)%5D%0Alista_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Alista_vazia: list%5Bint%5D = %5B%5D%0Alista_obj: list%5BNA%5D = %5BNA(1), NA(2), NA(3), NA(4), NA(5)%5D%0Alista_frase = %5B%22ola%22, %22tudo%22, %22bem?%22%5D%0A%0Aprint(%22-----------%22)%0Aprint(%22lista preenchida:%22, lista_preenchida)%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22, %22.join(str (x) for x in lista_obj))%0Aprint(%22lista frase:%22, lista_frase)%0Aprint(%22lista aleatoria%22,lista_aleatoria)%0A%0Aprint(%22-----------%5Cn%22)%0A%0A%0A######### adicoes e remocao ###############%0A%0Alista_vazia.append(1)%0Alista_obj.append(NA(6))%0A%0Alista_preenchida.remove(3)%0A%0Aobj_rev_primeira = lista_obj.pop(0)%0Aobj_rev_ultimo = lista_obj.pop(-1)%0A%0Aprint(%22adi%C3%A7%C3%A3o e remo%C3%A7%C3%A3o%5Cn%22)%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22lista preenchida:%22,lista_preenchida)%0Aprint(%22Primeiro objeto removido:%22, obj_rev_primeira)%0Aprint(%22Ultimo objeto removido:%22, obj_rev_ultimo)%0A%0A\n+@@ -1165,32 +1165,55 @@%0A (%2522Ordena%25C3%25A7%25C3%25A3o%255Cn%2522)%250A%0A+\n print(\n-%22\n+%2522\n ----\n@@ -78,284 +78,36 @@\n ----\n-%5Cn%22)%0A%0A%0A###########ordena%C3%A7%C3%A3o##############%0A%0Asorteio = sorted(lista_preenchida)%0A%0Aprint(%22Ordena%C3%A7%C3%A3o%5Cn%22)%0Aprint(%22lista ordenada:%22, sorteio)%0Aprint(%22-----------%5Cn%22)%0A%0Alista_preenchida.insert(0, 13)%0Alista_preenchida.insert(len(lista_preenchida), 22)%0A%0Aprint(%22Inser%C3%A7%C3%B5es:%22,lista_preenchida)%0A%0A\n+%255Cn%2522)%250A%0A print(%2522lista ord\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-17_14-12-31",
+            "content": "@@ -1,1425 +1,222 @@\n-import random%0A%0Aclass NA: %0A    def __init__(self, N: int):%0A        self.x = N%0A%0A    def __str__(self):%0A        return f%22NA(%7Bself.x%7D)%22%0A    %0A%0A#######    listas iniciais ##############%0Alista_aleatoria = %5Brandom.randint(1, 100) for _ in range(5)%5D%0Alista_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Alista_vazia: list%5Bint%5D = %5B%5D%0Alista_obj: list%5BNA%5D = %5BNA(1), NA(2), NA(3), NA(4), NA(5)%5D%0Alista_frase = %5B%22ola%22, %22tudo%22, %22bem?%22%5D%0A%0Aprint(%22-----------%22)%0Aprint(%22lista preenchida:%22, lista_preenchida)%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22, %22.join(str (x) for x in lista_obj))%0Aprint(%22lista frase:%22, lista_frase)%0Aprint(%22lista aleatoria%22,lista_aleatoria)%0A%0Aprint(%22-----------%5Cn%22)%0A%0A%0A######### adicoes e remocao ###############%0A%0Alista_vazia.append(1)%0Alista_obj.append(NA(6))%0A%0Alista_preenchida.remove(3)%0A%0Aobj_rev_primeira = lista_obj.pop(0)%0Aobj_rev_ultimo = lista_obj.pop(-1)%0A%0Aprint(%22adi%C3%A7%C3%A3o e remo%C3%A7%C3%A3o%5Cn%22)%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22lista preenchida:%22,lista_preenchida)%0Aprint(%22Primeiro objeto removido:%22, obj_rev_primeira)%0Aprint(%22Ultimo objeto removido:%22, obj_rev_ultimo)%0A%0Aprint(%22-----------%5Cn%22)%0A%0A%0A###########ordena%C3%A7%C3%A3o##############%0A%0Asorteio = sorted(lista_preenchida)%0A%0Aprint(%22Ordena%C3%A7%C3%A3o%5Cn%22)%0Aprint(%22lista ordenada:%22, sorteio)%0Aprint(%22-----------%5Cn%22)%0A%0A%0A##########inser%C3%A7%C3%B5es##############%0A%0Alista_preenchida.insert(0, 13)%0Alista_preenchida.insert(len(lista_preenchida), 22)%0Aprint(%22Inser%C3%A7%C3%B5es%5Cn%22)%0Aprint(%22Inser%C3%A7%C3%B5es:%22,lista_pree\n+@@ -1235,44 +1235,8 @@%0A %2522)%250A%250A%0A-%250A##########inser%25C3%25A7%25C3%25B5es##############%250A%250A%0A list%0A@@ -1317,28 +1317,8 @@%0A 22)%250A%0A-print(%2522Inser%25C3%25A7%25C3%25B5es%255Cn%2522)%0A %250Apri%0A@@ -1351,33 +1351,10 @@%0A \n nchida)\n-%0A\n+%250A%0A-\n print(\n-%22\n+%2522\n ----\n@@ -226,11 +226,24 @@\n ----\n-%5Cn%22)%0A%0A\n+%255Cn%2522)%250A%0A %250A%250A\n %0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-11-17_14-14-28",
+            "content": "@@ -1,1484 +1,90 @@\n-import random%0A%0Aclass NA: %0A    def __init__(self, N: int):%0A        self.x = N%0A%0A    def __str__(self):%0A        return f%22NA(%7Bself.x%7D)%22%0A    %0A%0A#######    listas iniciais ##############%0Alista_aleatoria = %5Brandom.randint(1, 100) for _ in range(5)%5D%0Alista_preenchida: list%5Bint%5D = %5B1, 2, 3, 4, 5%5D%0Alista_vazia: list%5Bint%5D = %5B%5D%0Alista_obj: list%5BNA%5D = %5BNA(1), NA(2), NA(3), NA(4), NA(5)%5D%0Alista_frase = %5B%22ola%22, %22tudo%22, %22bem?%22%5D%0A%0Aprint(%22-----------%22)%0Aprint(%22lista preenchida:%22, lista_preenchida)%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22, %22.join(str (x) for x in lista_obj))%0Aprint(%22lista frase:%22, lista_frase)%0Aprint(%22lista aleatoria%22,lista_aleatoria)%0A%0Aprint(%22-----------%5Cn%22)%0A%0A%0A######### adicoes e remocao ###############%0A%0Alista_vazia.append(1)%0Alista_obj.append(NA(6))%0A%0Alista_preenchida.remove(3)%0A%0Aobj_rev_primeira = lista_obj.pop(0)%0Aobj_rev_ultimo = lista_obj.pop(-1)%0A%0Aprint(%22adi%C3%A7%C3%A3o e remo%C3%A7%C3%A3o%5Cn%22)%0Aprint(%22lista vazia:%22, lista_vazia)%0Aprint(%22lista preenchida:%22,lista_preenchida)%0Aprint(%22Primeiro objeto removido:%22, obj_rev_primeira)%0Aprint(%22Ultimo objeto removido:%22, obj_rev_ultimo)%0A%0Aprint(%22-----------%5Cn%22)%0A%0A%0A###########ordena%C3%A7%C3%A3o##############%0A%0Asorteio = sorted(lista_preenchida)%0A%0Aprint(%22Ordena%C3%A7%C3%A3o%5Cn%22)%0Aprint(%22lista ordenada:%22, sorteio)%0Aprint(%22-----------%5Cn%22)%0A%0A%0A##########inser%C3%A7%C3%B5es##############%0A%0Alista_preenchida.insert(0, 13)%0Alista_preenchida.insert(len(lista_preenchida), 22)%0Aprint(%22Inser%C3%A7%C3%B5es%5Cn%22)%0Aprint(%22Inser%C3%A7%C3%B5es:%22,lista_preenchida)%0Aprint(%22-----------%5Cn%22)%0A%0A%0A##########join############%0A%0Aretorno = %22 %22\n+@@ -1436,133 +1436,4 @@%0A )%250A%250A%250A%0A-##########join############%250A%250Aretorno = %2522 %2522\n .joi\n@@ -101,32 +101,40 @@\n ase)\n-%0A\n+%250A\n print(\n-%22\n+%2522\n Join\n-%5Cn%22)%0A\n+%2522)%250A\n print(\n-%22\n+%2522\n fras\n@@ -141,17 +141,19 @@\n e unida:\n-%22\n+%2522\n , retorn\n@@ -158,16 +158,20 @@\n rno)\n-%0A\n+%250A\n print(\n-%22\n+%2522\n ----\n@@ -181,10 +181,19 @@\n ----\n-%5Cn%22)%0A\n+%255Cn%2522)%250A%250A\n %0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-17_14-19-47",
+            "content": "@@ -1567,228 +1567,4 @@\n %22)%0A%0A\n-####### primeiro e ultimo###########%0A%0Aprimeiro = lista_preenchida%5B0%5D%0Aultimo = lista_preenchida%5B-1%5D%0A%0Aprint(%22Primeiro e ultimo%5Cn%22)%0Aprint(%22primeiro elemento:%22, primeiro)%0Aprint(%22ultimo elemento:%22, ultimo)%0Aprint(%22-----------%5Cn%22)%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-17_14-23-41",
+            "content": "import random\n\nclass NA: \n    def __init__(self, N: int):\n        self.x = N\n\n    def __str__(self):\n        return f\"NA({self.x})\"\n    \n\n#######    listas iniciais ##############\nlista_aleatoria = [random.randint(1, 100) for _ in range(5)]\nlista_preenchida: list[int] = [1, 2, 3, 4, 5]\nlista_vazia: list[int] = []\nlista_obj: list[NA] = [NA(1), NA(2), NA(3), NA(4), NA(5)]\nlista_frase = [\"ola\", \"tudo\", \"bem?\"]\n\nprint(\"-----------\")\nprint(\"lista preenchida:\", lista_preenchida)\nprint(\"lista vazia:\", lista_vazia)\nprint(\", \".join(str (x) for x in lista_obj))\nprint(\"lista frase:\", lista_frase)\nprint(\"lista aleatoria\",lista_aleatoria)\n\nprint(\"-----------\\n\")\n\n\n######### adicoes e remocao ###############\n\nlista_vazia.append(1)\nlista_obj.append(NA(6))\n\nlista_preenchida.remove(3)\n\nobj_rev_primeira = lista_obj.pop(0)\nobj_rev_ultimo = lista_obj.pop(-1)\n\nprint(\"adi\u00e7\u00e3o e remo\u00e7\u00e3o\\n\")\nprint(\"lista vazia:\", lista_vazia)\nprint(\"lista preenchida:\",lista_preenchida)\nprint(\"Primeiro objeto removido:\", obj_rev_primeira)\nprint(\"Ultimo objeto removido:\", obj_rev_ultimo)\n\nprint(\"-----------\\n\")\n\n\n###########ordena\u00e7\u00e3o##############\n\nsorteio = sorted(lista_preenchida)\n\nprint(\"Ordena\u00e7\u00e3o\\n\")\nprint(\"lista ordenada:\", sorteio)\nprint(\"-----------\\n\")\n\n\n##########inser\u00e7\u00f5es##############\n\nlista_preenchida.insert(0, 13)\nlista_preenchida.insert(len(lista_preenchida), 22)\nprint(\"Inser\u00e7\u00f5es\\n\")\nprint(\"Inser\u00e7\u00f5es:\",lista_preenchida)\nprint(\"-----------\\n\")\n\n\n##########join############\n\nretorno = \" \".join(lista_frase)\nprint(\"Join\\n\")\nprint(\"frase unida:\", retorno)\nprint(\"-----------\\n\")\n\n####### primeiro e ultimo###########\n\nprimeiro = lista_preenchida[0]\nultimo = lista_preenchida[-1]\n\nprint(\"Primeiro e ultimo\\n\")\nprint(\"primeiro elemento:\", primeiro)\nprint(\"ultimo elemento:\", ultimo)\nprint(\"-----------\\n\")\n",
+            "lines": "80"
         }
     ]
 }

@@ -124,3 +124,19 @@
 2025-11-16 18:59:50, MOVE, v:1, k:poo@budega, mode:BACK
 2025-11-16 18:59:52, MOVE, v:1, k:poo@array, mode:PICK
 2025-11-16 18:59:53, EXEC, v:1, k:poo@array, mode:LOCK, rate:0
+2025-11-16 19:02:38, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:1
+2025-11-16 19:03:39, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:6
+2025-11-16 19:03:40, EXEC, v:1, k:poo@array, mode:LOCK, rate:0
+2025-11-16 19:03:44, EXEC, v:1, k:poo@array, mode:LOCK, rate:100, size:6
+2025-11-16 19:05:20, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:12
+2025-11-16 19:09:31, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:23
+2025-11-16 19:10:01, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:23
+2025-11-16 19:11:29, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:23
+2025-11-16 19:13:12, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:24
+2025-11-16 19:20:37, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:23
+2025-11-16 19:21:26, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:23
+2025-11-16 19:21:38, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:23
+2025-11-16 19:21:47, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-16 19:46:19, SELF, v:1, k:poo@pula-pula, rate:100, alone:10, study:180
+2025-11-16 19:47:22, MOVE, v:1, k:poo@pula-pula, mode:PICK
+2025-11-16 19:47:23, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:100

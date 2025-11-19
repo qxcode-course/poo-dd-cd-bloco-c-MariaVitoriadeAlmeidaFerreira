@@ -38,3 +38,4 @@
 2025-11-17 14:23:41, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:80
 2025-11-17 14:24:00, EXEC, v:1, k:poo@array, mode:LOCK, rate:0
 2025-11-17 14:24:11, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-17 14:34:32, SELF, v:1, k:poo@array, rate:100, alone:10, study:240

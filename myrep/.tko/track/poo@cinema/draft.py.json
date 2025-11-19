@@ -142,8 +142,88 @@
         },
         {
             "label": "2025-11-19_19-42-40",
-            "content": "class Cliente:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def getId(self):\n        return self.id\n    \n    def getPhone(self):\n        return self.phone\n\n    def setId(self, id):\n        self.id  = id\n\n    def setPhone(self, phone):\n        self.phone = phone\n\n    def __str__(self) -> str:\n        return f\"{self.id}:{self.phone}\"\n    \nclass Teatro:\n    def __init__(self, capacidade: int):\n        self.assentos: list[Cliente | None] = [None] * capacidade\n        self.capacidade: int = capacidade\n\n    def __str__(self) -> str:\n        return f\"{self.assentos}\"\n\n    def procurar(self, nome_cliente: str) -> int:\n        for i, cliente in enumerate(self.assentos):\n            if cliente is not None and cliente.getId() == nome_cliente:\n                return i\n            return -1 # verica depois de tudo\n\n\n\nteatro = Teatro(5)\nprint(teatro.assentos)\n\n\n\n\n#def main():\n   # teatro = Teatro()\n  #  while True:\n   #     line: str = input()\n    #    print(\"$\" + line)\n     #   args: list[str] = line.split(\" \")\n      #  if args[0] == \"end\":\n       #     break\n        #elif args[0] == \"show\":\n         #   print(teatro)\n#main()",
+            "content": "@@ -863,90 +863,53 @@\n udo%0A\n-    %0A    def vericarIndex(self, id: str, phone: int, index: int) -%3E bool:%0A        \n+%0A%0A%0Ateatro = Teatro(5)%0Aprint(teatro.assentos)%0A\n %0A%0A%0A%0A\n",
             "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-45-37",
+            "content": "@@ -945,190 +945,10 @@\n     \n-return 0  %3C= index  %3C len(self.assentos)%0A%0A%0Ateatro = Teatro(5)%0Aprint(teatro.vericarIndex(0))%0Aprint(teatro.vericarIndex(4))%0Aprint(teatro.vericarIndex(5))%0Aprint(teatro.vericarIndex(-1))\n+%0A%0A\n %0A%0A#d\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-11-19_19-50-39",
+            "content": "@@ -890,16 +890,37 @@\n ex(self,\n+ id: str, phone: int,\n  index: \n@@ -1000,17 +1000,17 @@\n  Teatro(\n-4\n+5\n )%0Aprint(\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-19_19-51-42",
+            "content": "@@ -979,17 +979,17 @@\n  Teatro(\n-5\n+4\n )%0Aprint(\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-19_19-52-03",
+            "content": "@@ -965,148 +965,10 @@\n os)%0A\n-    %0A    def resevar(self, id: str, phone: int, index: int) -%3E bool:%0A        if index %3C 0:%0A            print(%22fail: cadeira nao existe%22)%0A%0A%0A#\n+%0A%0A\n teat\n@@ -982,17 +982,16 @@\n atro(5)%0A\n-#\n print(te\n@@ -1012,17 +1012,16 @@\n dex(0))%0A\n-#\n print(te\n@@ -1042,17 +1042,16 @@\n dex(4))%0A\n-#\n print(te\n@@ -1072,17 +1072,16 @@\n dex(5))%0A\n-#\n print(te\n@@ -1104,16 +1104,17 @@\n x(-1))%0A%0A\n+#\n def main\n@@ -1120,16 +1120,17 @@\n n():%0A   \n+#\n  teatro \n@@ -1142,16 +1142,17 @@\n tro()%0A  \n+#\n   while \n@@ -1156,24 +1156,25 @@\n le True:%0A   \n+#\n      line: s\n@@ -1186,24 +1186,25 @@\n input()%0A    \n+#\n     print(%22$\n@@ -1218,16 +1218,17 @@\n e)%0A     \n+#\n    args:\n@@ -1258,24 +1258,25 @@\n (%22 %22)%0A      \n+#\n   if args%5B0%5D\n@@ -1289,24 +1289,25 @@\n nd%22:%0A       \n+#\n      break%0A \n@@ -1313,16 +1313,17 @@\n         \n+#\n elif arg\n@@ -1347,16 +1347,17 @@\n         \n+#\n    print\n@@ -1365,14 +1365,15 @@\n teatro)%0A\n+#\n main()\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-19_19-56-56",
+            "content": "@@ -1045,38 +1045,17 @@\n  if \n-not self.verificarIndex(index)\n+index %3C 0\n :%0A  \n@@ -1099,16 +1099,17 @@\n iste%22)%0A%0A\n+%0A\n #teatro \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-19_20-04-11",
+            "content": "@@ -1121,25 +1121,8 @@\n ste%22\n- %5C%0A            %22%22\n )%0A%0A#\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-19_20-04-24",
+            "content": "@@ -591,137 +591,32 @@\n     \n-assentos_capa = %5Bstr(Cliente) if Cliente else %22-%22 for Cliente in self.assentos%5D%0A        return %22%5B%22 + %22 %22.join(assentos_capa) + %22%5D\n+return f%22%7Bself.assentos%7D\n %22%0A%0A \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-11-19_20-08-35",
+            "content": "@@ -922,24 +922,28 @@\n n i%0A        \n+    \n return -1 # \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-19_20-09-39",
+            "content": "@@ -608,17 +608,17 @@\n  = %5Bstr(\n-c\n+C\n liente) \n@@ -616,25 +616,25 @@\n Cliente) if \n-c\n+C\n liente else \n@@ -641,17 +641,17 @@\n %22-%22 for \n-c\n+C\n liente i\n@@ -1416,17 +1416,16 @@\n  Teatro(\n-5\n )%0A    wh\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-19_20-10-36",
+            "content": "@@ -1218,16 +1218,33 @@\n  existe%22\n+ %5C%0A            %22%22\n )%0A%0A#teat\n@@ -1640,108 +1640,8 @@\n ro)%0A\n-        elif args%5B0%5D == %22reservas%22:%0A            teatro.resevar(args%5B1%5D, int%5Bargs%5B2%5D%5D, int(args%5B3%5D))%0A\n main\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-19_20-12-54",
+            "content": "@@ -1698,17 +1698,17 @@\n  int\n-(\n+%5B\n args%5B2%5D\n-)\n+%5D\n , in\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-19_20-13-08",
+            "content": "@@ -1623,82 +1623,8 @@\n ro)%0A\n-        elif args%5B0%5D == %22init%22:%0A            teatro = Teatro(int(args%5B1%5D))%0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-19_20-14-04",
+            "content": "@@ -1399,16 +1399,17 @@\n  Teatro(\n+5\n )%0A    wh\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-19_20-15-35",
+            "content": "@@ -1399,19 +1399,16 @@\n  Teatro(\n-%22 %22\n )%0A    wh\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-19_20-15-41",
+            "content": "@@ -1399,17 +1399,19 @@\n  Teatro(\n-0\n+%22 %22\n )%0A    wh\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-19_20-16-01",
+            "content": "class Cliente:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def getId(self):\n        return self.id\n    \n    def getPhone(self):\n        return self.phone\n\n    def setId(self, id):\n        self.id  = id\n\n    def setPhone(self, phone):\n        self.phone = phone\n\n    def __str__(self) -> str:\n        return f\"{self.id}:{self.phone}\"\n    \nclass Teatro:\n    def __init__(self, capacidade: int):\n        self.assentos: list[Cliente | None] = [None] * capacidade\n        self.capacidade: int = capacidade\n\n    def __str__(self) -> str:\n        assentos_capa = [str(cliente) if cliente else \"-\" for cliente in self.assentos]\n        return \"[\" + \" \".join(assentos_capa) + \"]\"\n\n    def procurar(self, nome_cliente: str) -> int:\n        for i, cliente in enumerate(self.assentos):\n            if cliente is not None and cliente.getId() == nome_cliente:\n                return i\n        return -1 # verica depois de tudo\n    \n    def vericarIndex(self, index: int) -> bool:\n        return 0  <= index  < len(self.assentos)\n    \n    def resevar(self, id: str, phone: int, index: int) -> bool:\n        if not self.verificarIndex(index):\n            print(\"fail: cadeira nao existe\")\n\n#teatro = Teatro(5)\n#print(teatro.vericarIndex(0))\n#print(teatro.vericarIndex(4))\n#print(teatro.vericarIndex(5))\n#print(teatro.vericarIndex(-1))\n\ndef main():\n    teatro = Teatro(0)\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(teatro)\n        elif args[0] == \"init\":\n            teatro = Teatro(int(args[1]))\n        elif args[0] == \"reservas\":\n            teatro.resevar(args[1], int(args[2]), int(args[3]))\nmain()",
+            "lines": "63"
         }
     ]
 }

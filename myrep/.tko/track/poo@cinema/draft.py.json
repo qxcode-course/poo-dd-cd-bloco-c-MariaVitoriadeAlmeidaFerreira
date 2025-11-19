@@ -27,8 +27,123 @@
         },
         {
             "label": "2025-11-19_18-48-13",
-            "content": "class Cliente:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def getId(self):\n        return self.id\n    \n    def getPhone(self):\n        return self.phone\n\n    def setId(self, id):\n        self.id  = id\n\n    def setPhone(self, phone):\n        self.phone = phone\n\n    def __str__(self):\n        return f\"{self.id}:{self.phone}\"\n    \nclass Teatro:\n    def __init__(self, capacidadde: int):\n        self.assentos = list[Cliente] = []\n        self.pesquisar = name: str: int\n    \n\n",
+            "content": "@@ -506,16 +506,18 @@\n r = \n-%5BNone%5D *\n+name: str:\n  int\n",
             "lines": "26"
+        },
+        {
+            "label": "2025-11-19_18-59-13",
+            "content": "@@ -424,16 +424,17 @@\n apacidad\n+d\n e: int):\n@@ -515,27 +515,11 @@\n %5D * \n-capacidade%0A        \n+int\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-19_19-01-59",
+            "content": "@@ -493,20 +493,28 @@\n elf.\n-capacidade =\n+pesquisar = %5BNone%5D *\n  cap\n@@ -521,15 +521,23 @@\n acidade%0A\n+        \n %0A    %0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-19_19-05-02",
+            "content": "@@ -518,182 +518,8 @@\n de%0A%0A\n-    def procurar(self, nome_cliente: str) -%3E int:%0A        for i, nome_cliente in enumerate(self.assentos):%0A            if nome_cliente == None:%0A                return None%0A%0A%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-19_19-10-17",
+            "content": "@@ -698,261 +698,4 @@\n   %0A%0A\n-def main():%0A    teatro = Teatro()%0A    while True:%0A        line: str = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split(%22 %22)%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(teatro)%0Amain()\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-19_19-13-35",
+            "content": "@@ -690,70 +690,14 @@\n one%0A\n+%0A%0A\n     \n-        if nome_cliente%0A                return i%0A        %0A\n %0A%0Ade\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-11-19_19-16-30",
+            "content": "@@ -717,33 +717,8 @@\n ente\n-.getId() == nome_cliente:\n %0A   \n@@ -749,16 +749,17 @@\n       %0A%0A\n+%0A\n def main\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-19_19-18-47",
+            "content": "@@ -326,33 +326,26 @@\n _str__(self)\n- -%3E str\n :%0A\n+\n         retu\n@@ -518,91 +518,8 @@\n de%0A%0A\n-    def __str__(self) -%3E str:%0A        return f%22%7Bself.assentos%7D:%7Bself.capacidade%7D%22%0A%0A\n     \n@@ -764,16 +764,24 @@\n eturn i%0A\n+        \n %0A%0Adef ma\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-11-19_19-20-24",
+            "content": "@@ -506,16 +506,29 @@\n pacidade\n+ = capacidade\n %0A%0A    de\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-19_19-20-42",
+            "content": "@@ -510,26 +510,8 @@\n dade\n-: int = capacidade\n %0A%0A  \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-19_19-21-02",
+            "content": "@@ -865,99 +865,8 @@\n i%0A%0A%0A\n-teatro = Teatro(5)%0Ateatro.assento%5B2%5D = Cliente(%22Ana%22, 12)%0Aprint(teatro.assento(%22Ana%22))%0A%0A%0A%0A#\n def \n@@ -876,17 +876,16 @@\n n():%0A   \n-#\n  teatro \n@@ -897,17 +897,16 @@\n tro()%0A  \n-#\n   while \n@@ -914,17 +914,16 @@\n rue:%0A   \n-#\n      lin\n@@ -939,25 +939,24 @@\n input()%0A    \n-#\n     print(%22$\n@@ -970,17 +970,16 @@\n e)%0A     \n-#\n    args:\n@@ -1013,17 +1013,16 @@\n )%0A      \n-#\n   if arg\n@@ -1043,17 +1043,16 @@\n %0A       \n-#\n      bre\n@@ -1062,17 +1062,16 @@\n         \n-#\n elif arg\n@@ -1095,17 +1095,16 @@\n         \n-#\n    print\n@@ -1116,9 +1116,8 @@\n ro)%0A\n-#\n main\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-19_19-26-18",
+            "content": "@@ -480,15 +480,8 @@\n ente\n- %7C None\n %5D = \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-28-42",
+            "content": "@@ -755,23 +755,59 @@\n nte \n-is not None and\n+== None:%0A                return None%0A            if\n  nom\n@@ -811,24 +811,32 @@\n nome_cliente\n+.getId()\n  == nome_cli\n@@ -839,24 +839,16 @@\n _cliente\n-.getId()\n :%0A      \n@@ -870,30 +870,8 @@\n n i%0A\n-            return -1%0A\n %0A%0Ate\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-31-23",
+            "content": "@@ -493,21 +493,8 @@\n = %5B%5D\n- * capacidade\n %0A   \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-19_19-33-56",
+            "content": "@@ -608,16 +608,34 @@\n ssentos%7D\n+:%7Bself.capacidade%7D\n %22%0A%0A    d\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-19_19-37-55",
+            "content": "@@ -461,17 +461,18 @@\n assentos\n-:\n+ =\n  list%5BCl\n@@ -778,16 +778,8 @@\n ente\n-.getId()\n  == \n@@ -786,24 +786,32 @@\n nome_cliente\n+.getId()\n :%0A          \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-19_19-38-46",
+            "content": "@@ -881,17 +881,16 @@\n .assento\n-s\n %5B2%5D = Cl\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-19_19-38-57",
+            "content": "@@ -940,33 +940,8 @@\n %22))%0A\n-print(teatro.assentos())%0A\n %0A%0A%0A#\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-19_19-39-28",
+            "content": "@@ -487,20 +487,16 @@\n one%5D = %5B\n-None\n %5D * capa\n@@ -962,14 +962,8 @@\n tos(\n-%22joao%22\n ))%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-40-00",
+            "content": "@@ -931,17 +931,16 @@\n .assento\n-s\n (%22Ana%22))\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-40-08",
+            "content": "@@ -852,17 +852,16 @@\n rn -1%0A%0A%0A\n-%0A\n teatro =\n@@ -875,31 +875,8 @@\n (5)%0A\n-print(teatro.assentos)%0A\n teat\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-40-51",
+            "content": "@@ -895,16 +895,116 @@\n sentos)%0A\n+teatro.assentos%5B2%5D = Cliente(%22Ana%22, 12)%0Aprint(teatro.assentos(%22Ana%22))%0Aprint(teatro.assentos(%22joao%22))\n %0A%0A%0A%0A#def\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-19_19-41-01",
+            "content": "@@ -679,16 +679,21 @@\n  for i, \n+nome_\n cliente \n@@ -736,16 +736,21 @@\n      if \n+nome_\n cliente \n@@ -765,16 +765,21 @@\n one and \n+nome_\n cliente.\n@@ -853,32 +853,8 @@\n n -1\n- # verica depois de tudo\n %0A%0A%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-19_19-42-40",
+            "content": "class Cliente:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def getId(self):\n        return self.id\n    \n    def getPhone(self):\n        return self.phone\n\n    def setId(self, id):\n        self.id  = id\n\n    def setPhone(self, phone):\n        self.phone = phone\n\n    def __str__(self) -> str:\n        return f\"{self.id}:{self.phone}\"\n    \nclass Teatro:\n    def __init__(self, capacidade: int):\n        self.assentos: list[Cliente | None] = [None] * capacidade\n        self.capacidade: int = capacidade\n\n    def __str__(self) -> str:\n        return f\"{self.assentos}\"\n\n    def procurar(self, nome_cliente: str) -> int:\n        for i, cliente in enumerate(self.assentos):\n            if cliente is not None and cliente.getId() == nome_cliente:\n                return i\n            return -1 # verica depois de tudo\n\n\n\nteatro = Teatro(5)\nprint(teatro.assentos)\n\n\n\n\n#def main():\n   # teatro = Teatro()\n  #  while True:\n   #     line: str = input()\n    #    print(\"$\" + line)\n     #   args: list[str] = line.split(\" \")\n      #  if args[0] == \"end\":\n       #     break\n        #elif args[0] == \"show\":\n         #   print(teatro)\n#main()",
+            "lines": "53"
         }
     ]
 }

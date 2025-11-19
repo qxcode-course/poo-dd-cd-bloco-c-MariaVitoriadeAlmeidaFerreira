@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2025-11-19_18-32-42",
-            "content": "",
+            "content": "@@ -1,14 +0,0 @@\n-a = 5%0Aprint(a)\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-11-19_18-33-51",
+            "content": "@@ -1,107 +1,14 @@\n-class Cliente:%0A    def __init__(self, id: str, phone: int):%0A        self.id = id%0A        self.phone = phone\n+a = 5%0Aprint(a)\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-19_18-36-45",
+            "content": "@@ -104,277 +104,4 @@\n hone\n-%0A%0A    def getId(self):%0A        return self.id%0A    %0A    def getPhone(self):%0A        return self.phone%0A%0A    def setId(self, id):%0A        self.id  = id%0A%0A    def setPhone(self, phone):%0A        self.phone = phone%0A%0A    def __str__(self):%0A        return f%22%7Bself.id%7D:%7Bself.phone%7D%22%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-19_18-41-39",
+            "content": "@@ -377,137 +377,4 @@\n e%7D%22%0A\n-    %0Aclass Teatro:%0A    def __init__(self, capacidadde: int):%0A        self.assentos = list%5BCliente%5D = %5B%5D%0A        self.pesquisar%0A    %0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-19_18-46-20",
+            "content": "@@ -503,25 +503,8 @@\n isar\n- = name: str: int\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-11-19_18-48-13",
+            "content": "class Cliente:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def getId(self):\n        return self.id\n    \n    def getPhone(self):\n        return self.phone\n\n    def setId(self, id):\n        self.id  = id\n\n    def setPhone(self, phone):\n        self.phone = phone\n\n    def __str__(self):\n        return f\"{self.id}:{self.phone}\"\n    \nclass Teatro:\n    def __init__(self, capacidadde: int):\n        self.assentos = list[Cliente] = []\n        self.pesquisar = name: str: int\n    \n\n",
+            "lines": "26"
         }
     ]
 }

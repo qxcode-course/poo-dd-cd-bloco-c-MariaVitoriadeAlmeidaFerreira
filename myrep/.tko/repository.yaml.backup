@@ -24,7 +24,7 @@ tasks:
   poo@budega: '{rate:100, guide:video, alone:8, study:180}'
   poo@lapiseira: '{rate:100, human:Namorado, alone:9, study:120}'
   poo@pula-pula: '{rate:100, alone:10, study:180}'
-  poo@cinema: '{rate:11}'
+  poo@cinema: '{rate:33}'
 flags:
   quests: 0
   tracks: 0

@@ -12,7 +12,7 @@ sources:
   type: clone
   branch: master
   cache_path: C:\Users\almei\OneDrive\Documentos\Estudos_vitoria\poo-dd-cd-bloco-c-MariaVitoriadeAlmeidaFerreira\myrep\.tko\cache\poo\Readme.md
-  cache_timestamp: '2025-11-19 18:32:20'
+  cache_timestamp: '2025-11-19 21:45:18'
   filters:
   - listas
 expanded:
@@ -24,7 +24,7 @@ tasks:
   poo@budega: '{rate:100, guide:video, alone:8, study:180}'
   poo@lapiseira: '{rate:100, human:Namorado, alone:9, study:120}'
   poo@pula-pula: '{rate:100, alone:10, study:180}'
-  poo@cinema: '{rate:33}'
+  poo@cinema: '{rate:77}'
 flags:
   quests: 0
   tracks: 0

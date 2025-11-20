@@ -36,12 +36,12 @@ class Teatro:
     def verificarIndex(self, index: int) -> bool:
         return 0  <= index  < len(self.__assentos)
     
-    def resevar(self, id: str, phone: int, index: int) -> bool:
+    def reservar(self, id: str, phone: int, index: int) -> bool:
         if not self.verificarIndex(index):
             print("fail: cadeira nao existe")
             return False
         if self.procurar(id) != -1:
-            print("fail: cadeira ja esta ocupada")
+            print("fail: cliente ja esta no cinema")
             return False
         if self.__assentos[index] is not None:
             print("fail: cadeira ja esta ocupada")
@@ -49,15 +49,18 @@ class Teatro:
 
         self.__assentos[index] = Cliente(id, phone)
         return True
-
-            
-            
     
-#teatro = Teatro(5)
-#print(teatro.vericarIndex(0))
-#print(teatro.vericarIndex(4))
-#print(teatro.vericarIndex(5))
-#print(teatro.vericarIndex(-1))
+    def cancelarcpf(self, id:str) -> bool:
+        index = self.procurar(id)
+        if index == -1:
+            print("fail:")
+            return False
+        self.__assentos[index] = None
+        return True
+    
+    def setAssento(self):
+        return self.__assento
+
 
 def main():
     teatro = Teatro(0)
@@ -71,6 +74,8 @@ def main():
             teatro = Teatro(int(args[1]))
         elif args[0] == "show":
             print(teatro)
-        elif args[0] == "reservas":
-            teatro.resevar(args[1], int(args[2]), int(args[3]))
+        elif args[0] == "reserve":
+            teatro.reservar(args[1], int(args[2]), int(args[3]))
+        elif args[0] == "cancelamentos":
+            teatro.cancelarcpf(args[1])
 main()
